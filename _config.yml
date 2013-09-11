@@ -9,13 +9,13 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Win.心得小筆記
-tagline: Site Tagline
-author : 
+tagline: Develope Note
+author :
   name : Win Wu
   email : yiyingwu.1990@gmail.com
   github : winwu
   twitter : yiyingwu.1990
-  feedburner : feedname
+  #feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 

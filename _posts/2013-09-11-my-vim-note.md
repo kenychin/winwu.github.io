@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: post
 title: "我的 Vim 指令筆記"
 date: 2013-09-11 08:00:00
 description: ""
-catrgories: server
+catrgories: lessons
 tags : [Linux, vim]
 ---
 

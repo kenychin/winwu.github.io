@@ -5,8 +5,8 @@
         <description>Win.心得小筆記 - Win Wu</description>
         <link>http://winwu.github.io</link>
         <link>http://winwu.github.io</link>
-        <lastBuildDate>2013-09-11T16:09:58+08:00</lastBuildDate>
-        <pubDate>2013-09-11T16:09:58+08:00</pubDate>
+        <lastBuildDate>2013-09-11T16:59:15+08:00</lastBuildDate>
+        <pubDate>2013-09-11T16:59:15+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -228,9 +228,7 @@
 
         <item>
                 <title>How To Use Zlip</title>
-                <description>&lt;p&gt;i&lt;/p&gt;
-
-&lt;h2 id='_zlip__textarea_'&gt;如何使用 Zlip 做出讓 textarea 複製全選的功能&lt;/h2&gt;</description>
+                <description>&lt;h2 id='_zlip__textarea_'&gt;如何使用 Zlip 做出讓 textarea 複製全選的功能&lt;/h2&gt;</description>
                 <link>http://winwu.github.io/2013/09/10/how-to-use-zlip</link>
                 <guid>http://winwu.github.io/2013/09/10/how-to-use-zlip</guid>
                 <pubDate>2013-09-10T21:00:00+08:00</pubDate>

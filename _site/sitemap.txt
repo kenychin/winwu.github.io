@@ -1,5 +1,4 @@
 
-http://winwu.github.io/about.html
 http://winwu.github.io/archive.html
 http://winwu.github.io/atom.xml
 http://winwu.github.io/categories.html

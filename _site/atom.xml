@@ -4,7 +4,7 @@
  <title>Win.心得小筆記</title>
  <link href="http://winwu.github.io/" rel="self"/>
  <link href="http://winwu.github.io"/>
- <updated>2013-09-11T16:09:58+08:00</updated>
+ <updated>2013-09-11T16:59:15+08:00</updated>
  <id>http://winwu.github.io</id>
  <author>
    <name>Win Wu</name>
@@ -233,9 +233,7 @@
    <link href="http://winwu.github.io/2013/09/10/how-to-use-zlip"/>
    <updated>2013-09-10T21:00:00+08:00</updated>
    <id>http://winwu.github.io/2013/09/10/how-to-use-zlip</id>
-   <content type="html">&lt;p&gt;i&lt;/p&gt;
-
-&lt;h2 id='_zlip__textarea_'&gt;如何使用 Zlip 做出讓 textarea 複製全選的功能&lt;/h2&gt;</content>
+   <content type="html">&lt;h2 id='_zlip__textarea_'&gt;如何使用 Zlip 做出讓 textarea 複製全選的功能&lt;/h2&gt;</content>
  </entry>
  
  <entry>
