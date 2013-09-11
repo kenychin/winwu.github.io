@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>我的 Vim 指令筆記</title>
+    <meta name="description" content="">
+    <meta name="author" content="Win Wu">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Win.心得小筆記</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>我的 Vim 指令筆記 </h1>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h2 id='vim_'>vim 的三種模式</h2>
+<hr />
+<h3 id='id1'>輸入模式</h3>
+
+<pre><code>輸入內文</code></pre>
+
+<h3 id='id2'>指揮模式</h3>
+
+<pre><code>也叫指令模式，主要是進入到可以對文件做修改，複製，剪下貼上，游標移動等動作。</code></pre>
+
+<h3 id='id3'>執行模式</h3>
+
+<pre><code>文件存檔，離開等等行為4。</code></pre>
+<hr />
+<h3 id='id4'>常用模式的切換</h3>
+
+<ul>
+<li>輸入模式 -&gt; 指揮模式 : 鍵盤 <code>Esc</code></li>
+
+<li>指揮模式 -&gt; 輸入模式 : 鍵盤 <code>i</code>, <code>a</code>, <code>o</code> * 指揮模式 -&gt; 執行模式 : 鍵盤 <code>:</code></li>
+</ul>
+
+<h3 id='_vim_'>如何進入 vim 編輯器</h3>
+
+<ul>
+<li>指令 <code>vim</code> 本身就可以開啓 vim 編輯器，跳出請先到執行模式再按 q(<code>:q</code>) 然後 Enter 鍵。</li>
+
+<li>指令 <code>vim 檔名</code> 可開啓某檔案。</li>
+</ul>
+
+<h3 id='_vim'>如何離開 vim</h3>
+
+<ul>
+<li><code>:q</code> : 直接離開（在文件沒有被編輯過的情況下可以用）。</li>
+
+<li><code>:q!</code> : 強制離開（不儲存你的修改強制離開）。</li>
+
+<li><code>:wq</code> : 儲存並離開 (wq順序不能反)。</li>
+
+<li><code>:x</code> : 儲存並離開。</li>
+</ul>
+
+<h3 id='id5'>進入輸入模式的幾個方式</h3>
+
+<ul>
+<li>
+<p>Append:</p>
+
+<ul>
+<li><code>a</code>: 游標前插入文字。</li>
+
+<li><code>A</code>: 游標移到此行最後一個字元。</li>
+</ul>
+</li>
+
+<li>
+<p>Insert:</p>
+
+<ul>
+<li><code>i</code>: 游標後插入文字。</li>
+
+<li><code>I</code>: 游標移到此行第一個字元。</li>
+</ul>
+</li>
+
+<li>
+<p>Open a new line:</p>
+
+<ul>
+<li><code>o</code>: 游標所在的那一行，向下插入新的一行。</li>
+
+<li><code>O</code>: 游標所在的那一行，向上插入新的一行。</li>
+</ul>
+</li>
+</ul>
+
+<h3 id='id6'>指揮模式下的常用指令(注意大小寫有別)</h3>
+
+<p>* 針對現在畫面跳到上中下區域： * <code>H</code> : 跳到畫面上面。 * <code>M</code> : 跳到畫面中間。 * <code>L</code> : 跳到畫面下方。 * 上下左右移動： * <code>h</code> : 往左移動。 * <code>j</code> : 往下移動。 * <code>k</code> : 往上移動。 * <code>l</code> : 往右移動。 * <code>數字 ＋ [h, j, k ,l] </code> : 往左,下,右,上移動幾個字元。</p>
+
+<ul>
+<li>
+<p><code>gg</code> : 跳到第一行。</p>
+</li>
+
+<li>
+<p><code>G</code> : 跳到最後一行。</p>
+</li>
+
+<li>
+<p><code>數字 ＋ gg </code> : 跳到該數字那一行。</p>
+</li>
+
+<li>
+<p><code>數字 ＋ G </code> : 跳到該數字那一行。</p>
+</li>
+
+<li>
+<p><code>b</code> : 移動到上一個字的第一個字元。</p>
+</li>
+
+<li>
+<p><code>w</code> : 移動到下一個字的第一個字元。</p>
+</li>
+
+<li>
+<p><code>W</code> : 移動到下一個字的第一個字元(以空白鍵或是tab鍵當區隔的跳法)。</p>
+</li>
+
+<li>
+<p><code>ctrl + f</code> : 下一頁（forward）。</p>
+</li>
+
+<li>
+<p><code>ctrl + b</code> : 上一頁（back）。</p>
+</li>
+
+<li>
+<p><code>ctrl + g</code> : 顯示你目前位於整份文件的哪一行。 * <code>^</code> : 移到此行的第一個字元。 * <code>$</code> : 移到此行的最後一個字元。</p>
+</li>
+</ul>
+
+<h3 id='id7'>指令模式下的操作</h3>
+
+<ul>
+<li>
+<p><code>:f</code> : 顯示目前檔案路徑。</p>
+</li>
+
+<li>
+<p><code>:q</code> : 直接離開（在文件沒有被編輯過的情況下可以用）。</p>
+</li>
+
+<li>
+<p><code>:q!</code> : 強制離開（不儲存你的修改強制離開）。</p>
+</li>
+
+<li>
+<p><code>:wq</code> : 儲存並離開 (wq順序不能反)。</p>
+</li>
+
+<li>
+<p><code>:x</code> : 儲存並離開。</p>
+</li>
+
+<li>
+<p><code>:set nu</code> : 顯示行號（也有人說:set number，取消則為<code>:set nonumber</code>）。</p>
+</li>
+
+<li>
+<p><code>:set list</code> : 顯示看不見的空白字元或tab鍵。</p>
+</li>
+
+<li>
+<p><code>:set hlsearch</code> : 搜尋到的字串反白。</p>
+</li>
+
+<li>
+<p><code>dd</code> : 刪除游標所在的那一行。</p>
+</li>
+
+<li>
+<p><code>數字 ＋ dd </code> : 刪除游標往下多少行。</p>
+</li>
+
+<li>
+<p><code>x</code>: 刪除游標後的字元。</p>
+</li>
+
+<li>
+<p><code>X</code>: 刪除游標前的字元。</p>
+</li>
+
+<li>
+<p><code>數字＋x(X)</code> : 刪除游標後（前）多少個字元。</p>
+</li>
+
+<li>
+<p><code>u</code> : 復原。</p>
+</li>
+
+<li>
+<p><code>ctrl + r</code> : 回復（redo）。</p>
+</li>
+
+<li>
+<p><code>yy</code> : 複製游標所在的那一行。</p>
+</li>
+
+<li>
+<p><code>數字 ＋ yy </code> : 複製游標下幾行。</p>
+</li>
+
+<li>
+<p><code>p</code> : 游標後貼上。</p>
+</li>
+
+<li>
+<p><code>P</code> : 游標前貼上。 * <code>/要搜尋的文字</code>: 游標往下搜尋你要的文字。 * <code>?要搜尋的文字</code> : 游標網上搜尋你要的文字。</p>
+</li>
+
+<li>
+<p><code>n</code> : 重複搜尋。</p>
+</li>
+
+<li>
+<p><code>N</code> : 反方向的重複搜尋。</p>
+</li>
+</ul>
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; 2013 Win Wu
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

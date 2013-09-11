@@ -5,10 +5,226 @@
         <description>Win.心得小筆記 - Win Wu</description>
         <link>http://winwu.github.io</link>
         <link>http://winwu.github.io</link>
-        <lastBuildDate>2013-09-10T17:13:16+08:00</lastBuildDate>
-        <pubDate>2013-09-10T17:13:16+08:00</pubDate>
+        <lastBuildDate>2013-09-11T16:09:58+08:00</lastBuildDate>
+        <pubDate>2013-09-11T16:09:58+08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>我的 Vim 指令筆記</title>
+                <description>&lt;h2 id='vim_'&gt;vim 的三種模式&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h3 id='id1'&gt;輸入模式&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;輸入內文&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='id2'&gt;指揮模式&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;也叫指令模式，主要是進入到可以對文件做修改，複製，剪下貼上，游標移動等動作。&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='id3'&gt;執行模式&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;文件存檔，離開等等行為4。&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3 id='id4'&gt;常用模式的切換&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;輸入模式 -&amp;gt; 指揮模式 : 鍵盤 &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;指揮模式 -&amp;gt; 輸入模式 : 鍵盤 &lt;code&gt;i&lt;/code&gt;, &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;o&lt;/code&gt; * 指揮模式 -&amp;gt; 執行模式 : 鍵盤 &lt;code&gt;:&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='_vim_'&gt;如何進入 vim 編輯器&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;指令 &lt;code&gt;vim&lt;/code&gt; 本身就可以開啓 vim 編輯器，跳出請先到執行模式再按 q(&lt;code&gt;:q&lt;/code&gt;) 然後 Enter 鍵。&lt;/li&gt;
+
+&lt;li&gt;指令 &lt;code&gt;vim 檔名&lt;/code&gt; 可開啓某檔案。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='_vim'&gt;如何離開 vim&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:q&lt;/code&gt; : 直接離開（在文件沒有被編輯過的情況下可以用）。&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;:q!&lt;/code&gt; : 強制離開（不儲存你的修改強制離開）。&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;:wq&lt;/code&gt; : 儲存並離開 (wq順序不能反)。&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;:x&lt;/code&gt; : 儲存並離開。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='id5'&gt;進入輸入模式的幾個方式&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Append:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;a&lt;/code&gt;: 游標前插入文字。&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;A&lt;/code&gt;: 游標移到此行最後一個字元。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Insert:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;i&lt;/code&gt;: 游標後插入文字。&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;I&lt;/code&gt;: 游標移到此行第一個字元。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Open a new line:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;o&lt;/code&gt;: 游標所在的那一行，向下插入新的一行。&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;O&lt;/code&gt;: 游標所在的那一行，向上插入新的一行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='id6'&gt;指揮模式下的常用指令(注意大小寫有別)&lt;/h3&gt;
+
+&lt;p&gt;* 針對現在畫面跳到上中下區域： * &lt;code&gt;H&lt;/code&gt; : 跳到畫面上面。 * &lt;code&gt;M&lt;/code&gt; : 跳到畫面中間。 * &lt;code&gt;L&lt;/code&gt; : 跳到畫面下方。 * 上下左右移動： * &lt;code&gt;h&lt;/code&gt; : 往左移動。 * &lt;code&gt;j&lt;/code&gt; : 往下移動。 * &lt;code&gt;k&lt;/code&gt; : 往上移動。 * &lt;code&gt;l&lt;/code&gt; : 往右移動。 * &lt;code&gt;數字 ＋ [h, j, k ,l] &lt;/code&gt; : 往左,下,右,上移動幾個字元。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;gg&lt;/code&gt; : 跳到第一行。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;G&lt;/code&gt; : 跳到最後一行。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;數字 ＋ gg &lt;/code&gt; : 跳到該數字那一行。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;數字 ＋ G &lt;/code&gt; : 跳到該數字那一行。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;b&lt;/code&gt; : 移動到上一個字的第一個字元。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;w&lt;/code&gt; : 移動到下一個字的第一個字元。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;W&lt;/code&gt; : 移動到下一個字的第一個字元(以空白鍵或是tab鍵當區隔的跳法)。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ctrl + f&lt;/code&gt; : 下一頁（forward）。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ctrl + b&lt;/code&gt; : 上一頁（back）。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ctrl + g&lt;/code&gt; : 顯示你目前位於整份文件的哪一行。 * &lt;code&gt;^&lt;/code&gt; : 移到此行的第一個字元。 * &lt;code&gt;$&lt;/code&gt; : 移到此行的最後一個字元。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='id7'&gt;指令模式下的操作&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:f&lt;/code&gt; : 顯示目前檔案路徑。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:q&lt;/code&gt; : 直接離開（在文件沒有被編輯過的情況下可以用）。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:q!&lt;/code&gt; : 強制離開（不儲存你的修改強制離開）。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:wq&lt;/code&gt; : 儲存並離開 (wq順序不能反)。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:x&lt;/code&gt; : 儲存並離開。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:set nu&lt;/code&gt; : 顯示行號（也有人說:set number，取消則為&lt;code&gt;:set nonumber&lt;/code&gt;）。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:set list&lt;/code&gt; : 顯示看不見的空白字元或tab鍵。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;:set hlsearch&lt;/code&gt; : 搜尋到的字串反白。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;dd&lt;/code&gt; : 刪除游標所在的那一行。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;數字 ＋ dd &lt;/code&gt; : 刪除游標往下多少行。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;x&lt;/code&gt;: 刪除游標後的字元。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;X&lt;/code&gt;: 刪除游標前的字元。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;數字＋x(X)&lt;/code&gt; : 刪除游標後（前）多少個字元。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;u&lt;/code&gt; : 復原。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ctrl + r&lt;/code&gt; : 回復（redo）。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;yy&lt;/code&gt; : 複製游標所在的那一行。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;數字 ＋ yy &lt;/code&gt; : 複製游標下幾行。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;p&lt;/code&gt; : 游標後貼上。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;P&lt;/code&gt; : 游標前貼上。 * &lt;code&gt;/要搜尋的文字&lt;/code&gt;: 游標往下搜尋你要的文字。 * &lt;code&gt;?要搜尋的文字&lt;/code&gt; : 游標網上搜尋你要的文字。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;n&lt;/code&gt; : 重複搜尋。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;N&lt;/code&gt; : 反方向的重複搜尋。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+                <link>http://winwu.github.io/2013/09/11/my-vim-note</link>
+                <guid>http://winwu.github.io/2013/09/11/my-vim-note</guid>
+                <pubDate>2013-09-11T08:00:00+08:00</pubDate>
+        </item>
 
         <item>
                 <title>How To Use Zlip</title>
