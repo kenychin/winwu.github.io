@@ -24,6 +24,10 @@
 }
 .content-left{
     color:#999;
+    width:25%;
+}
+.content-right{
+    width:75%;
 }
 .myname{
 
