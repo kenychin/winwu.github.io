@@ -1,0 +1,30 @@
+/* This is only for winwu.github.io*/
+.navbar-inner{
+    background: rgb(24, 33, 61);
+}
+.navbar .brand{
+    color:#fff;
+    text-shadow:none;
+}
+
+.navbar .nav>li>a {
+    color: rgb(142, 142, 214);
+    text-shadow: none;
+}
+
+.navbar .nav>li>a:focus, 
+.navbar .nav>li>a:hover {
+    color: #fff;
+}
+.container-narrow{
+    max-width:800px;
+}
+.clearfix{
+    clear:both;
+}
+.content-left{
+    color:#999;
+}
+.myname{
+
+}
