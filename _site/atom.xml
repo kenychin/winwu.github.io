@@ -4,13 +4,104 @@
  <title>Win.心得小筆記</title>
  <link href="http://winwu.github.io/" rel="self"/>
  <link href="http://winwu.github.io"/>
- <updated>2013-09-12T09:22:44+08:00</updated>
+ <updated>2013-09-13T13:54:19+08:00</updated>
  <id>http://winwu.github.io</id>
  <author>
    <name>Win Wu</name>
    <email>yiyingwu.1990@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Pure CSS 實作練習(一)：Homepage</title>
+   <link href="http://winwu.github.io/2013/09/13/yui-purecss-practice"/>
+   <updated>2013-09-13T21:00:00+08:00</updated>
+   <id>http://winwu.github.io/2013/09/13/yui-purecss-practice</id>
+   <content type="html">&lt;h2 id='pure_css_homepage'&gt;Pure CSS 實作練習(一)：Homepage&lt;/h2&gt;
+
+&lt;p&gt;這篇是延續好久好久以前寫的兩篇筆記，只是看看文章而已會讓我覺得學習中斷，感覺不是很好，後來我還是覺得想弄點什麼東西出來。之前的兩篇是這個：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://yiyingloveart.blogspot.tw/2013/08/pure-css-base-grids-forms.html'&gt;認識 Pure CSS 之筆記一：了解Base, Grids, Forms&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://yiyingloveart.blogspot.tw/2013/08/pure-css-buttons-tables-menus.html'&gt;認識 Pure CSS 之筆記二：了解Buttons, Tables, Menus&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id='id8'&gt;練習的結果&lt;/h3&gt;
+
+&lt;p&gt;主要是要練習 pureCSS 的 Grid，然後整格排版設計是參考某家搜尋網站的首頁做改造：P，icon 部分搭配的是 Font-Awesome ，Font-Awesome 的使用方式跟在用 bootstrap 的時候一樣，所以非常順手。至於配色就別跟我這個前端挑了（&amp;gt;&amp;lt;），這個練習的重點是在做前端不是Art (Orz)。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;Demo Url&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='https://github.com/winwu/pureCSS-practice'&gt;Github Repo 歡迎下載&lt;/a&gt;，不過手機上看還會跑版，還沒處理。&lt;/li&gt;
+
+&lt;li&gt;使用 Pure CSS 排列的一些樣板&lt;/li&gt;
+
+&lt;li&gt;關於 Pure 的使用方式，可至官網多瞭解 &lt;a href='http://purecss.io/'&gt;http://purecss.io/&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;範本內有搭配 Font-Awesome &lt;a href='http://fortawesome.github.io/Font-Awesome'&gt;http://fortawesome.github.io/Font-Awesome&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='homepage_style'&gt;homepage Style&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' title='' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Demo畫面2： &lt;img alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' title='' /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='id9'&gt;測試&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Firefix&lt;/code&gt;, &lt;code&gt;Chrome&lt;/code&gt; is OK。 * 還不算是很成熟的作品，應該會找時間整理頁面。 * 如果你有任何建議歡迎留言補充。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='id10'&gt;一些建議&lt;/h3&gt;
+
+&lt;p&gt;pureCSS在他的網頁上有寫到，如果你要在 &lt;code&gt;grid-u-?-?&lt;/code&gt; 的div裡加上 padding（除非你那塊沒有文字，不然很難不加 padding），它上面有寫到你可以這樣做（如果不這麼做寬度就會太多只至於div往下掉）：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+.pure-g &amp;gt; div {  
+     box-sizing: border-box;   
+   } 
+&lt;/code&gt; 可是&amp;#8230; 在我的 FireFox 整個大跑版，這時候你可以試試看補上-moz-box-sizing，如下範例。 &lt;a href='https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing'&gt;參考網址&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+ .pure-g&amp;gt;div{  
+   box-sizing: border-box;  
+   -moz-box-sizing: border-box;   
+ }  
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id='author'&gt;Author&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Author : Win Wu&lt;/li&gt;
+
+&lt;li&gt;Blog : &lt;a href='http://yiyingloveart.blogspot.tw/'&gt;http://yiyingloveart.blogspot.tw/&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;Update Date : 2013-08-31&lt;/li&gt;
+
+&lt;li&gt;License : MIT License&lt;/li&gt;
+&lt;/ul&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>ol, ul 的理解與誤用</title>
+   <link href="http://winwu.github.io/2013/09/13/ol_and_ul"/>
+   <updated>2013-09-13T21:00:00+08:00</updated>
+   <id>http://winwu.github.io/2013/09/13/ol_and_ul</id>
+   <content type="html">&lt;h2 id='ol_ul_'&gt;ol, ul 的理解與誤用&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;其實標題應該打成 &lt;code&gt;那些年我誤用的&amp;lt;p&amp;gt;與&amp;lt;ol&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+ </entry>
  
  <entry>
    <title>我的 Vim 指令筆記</title>
