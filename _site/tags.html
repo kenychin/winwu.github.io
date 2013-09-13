@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8">
     <title>Tags</title>
@@ -30,20 +30,25 @@
     <!-- atom & rss feed -->
     <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-
+    <script type="text/javascript" src="/assets/themes/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/assets/themes/jquery.pjax.js"></script>
   </head>
 
   <body>
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
-          <a class="brand" href="/">Win.心得小筆記</a>
+          <a id="go2homepage" class="brand" href="/" data-pjax>Win.心得小筆記</a>
           <ul class="nav">
             
             
             
 
 
+  
+    
+      
+    
   
     
       
@@ -104,9 +109,24 @@
     <div class="container-narrow">
       <div class="content content-left pull-left">
         <h3>Hi</h3><h4>I am <span class="myname">Win</span></h4>
-        <i class="icon-github"></i>
+        <!--i class="icon-github"></i-->
+        Frontend Engineer.<br/>
+        Please see <a href="/about.html" data-pjax>About Win</a>
       </div>
       <div class="content content-right pull-right">
+        <div class="pagination">
+        <ul>
+        
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+        
+        <li><a href="/archive.html">Archive</a></li>
+        
+        <li class="next disabled"><a>Next &rarr;</a>
+        
+        </ul>
+        </div>
+
+        <div id="pjax-container">
         
 <div class="page-header">
   <h1>Tags </h1>
@@ -123,21 +143,21 @@
 
   
      
+    	<li><a href="/tags.html#Linux-ref">Linux <span>1</span></a></li>
+     
     	<li><a href="/tags.html#tutorial-ref">tutorial <span>1</span></a></li>
      
-    	<li><a href="/tags.html#beginner-ref">beginner <span>1</span></a></li>
+    	<li><a href="/tags.html#JavaScript-ref">JavaScript <span>1</span></a></li>
      
-    	<li><a href="/tags.html#Linux-ref">Linux <span>1</span></a></li>
+    	<li><a href="/tags.html#vim-ref">vim <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#intro-ref">intro <span>1</span></a></li>
      
     	<li><a href="/tags.html#jekyll-ref">jekyll <span>1</span></a></li>
      
     	<li><a href="/tags.html#HTML-ref">HTML <span>3</span></a></li>
      
-    	<li><a href="/tags.html#intro-ref">intro <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#vim-ref">vim <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#JavaScript-ref">JavaScript <span>1</span></a></li>
+    	<li><a href="/tags.html#beginner-ref">beginner <span>1</span></a></li>
     
   
 
@@ -146,6 +166,26 @@
 </ul>
 
 
+ 
+  <h2 id="Linux-ref">Linux</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/2013/09/11/my-vim-note">我的 Vim 指令筆記</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
  
   <h2 id="tutorial-ref">tutorial</h2>
   <ul>
@@ -167,7 +207,7 @@
 
   </ul>
  
-  <h2 id="beginner-ref">beginner</h2>
+  <h2 id="JavaScript-ref">JavaScript</h2>
   <ul>
       
     
@@ -177,7 +217,7 @@
     
       
       	
-      	<li><a href="/lessons/2011/12/29/jekyll-introduction">Jekyll Introduction</a></li>
+      	<li><a href="/2013/09/10/how-to-use-zlip">How To Use Zlip</a></li>
       	
       
     
@@ -187,7 +227,7 @@
 
   </ul>
  
-  <h2 id="Linux-ref">Linux</h2>
+  <h2 id="vim-ref">vim</h2>
   <ul>
       
     
@@ -198,6 +238,26 @@
       
       	
       	<li><a href="/2013/09/11/my-vim-note">我的 Vim 指令筆記</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id="intro-ref">intro</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href="/lessons/2011/12/29/jekyll-introduction">Jekyll Introduction</a></li>
       	
       
     
@@ -263,7 +323,7 @@
 
   </ul>
  
-  <h2 id="intro-ref">intro</h2>
+  <h2 id="beginner-ref">beginner</h2>
   <ul>
       
     
@@ -282,52 +342,13 @@
 
 
   </ul>
- 
-  <h2 id="vim-ref">vim</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/2013/09/11/my-vim-note">我的 Vim 指令筆記</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
-  <h2 id="JavaScript-ref">JavaScript</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href="/2013/09/10/how-to-use-zlip">How To Use Zlip</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
 
 
   </div>
 </div>
 
 
+        </div>
       </div>
       <hr class="clearfix">
       <footer class="clearfix">
@@ -340,6 +361,14 @@
     </div>
 
     
+    <script>
+    //$('#pjax-container').hide().fadeIn(1000);
+    $(document).pjax('a[data-pjax]', '#pjax-container');
+    /*$(document).on('pjax:send', function() {
+      console.log('show');
+    });*/
+    $('#pjax-container').hide().fadeIn(1000);
+    </script>
   </body>
 </html>
 

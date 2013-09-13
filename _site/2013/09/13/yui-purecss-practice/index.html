@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8">
     <title>Pure CSS 實作練習(一)：Homepage</title>
@@ -30,20 +30,25 @@
     <!-- atom & rss feed -->
     <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-
+    <script type="text/javascript" src="/assets/themes/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/assets/themes/jquery.pjax.js"></script>
   </head>
 
   <body>
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
-          <a class="brand" href="/">Win.心得小筆記</a>
+          <a id="go2homepage" class="brand" href="/" data-pjax>Win.心得小筆記</a>
           <ul class="nav">
             
             
             
 
 
+  
+    
+      
+    
   
     
       
@@ -104,10 +109,26 @@
     <div class="container-narrow">
       <div class="content content-left pull-left">
         <h3>Hi</h3><h4>I am <span class="myname">Win</span></h4>
-        <i class="icon-github"></i>
+        <!--i class="icon-github"></i-->
+        Frontend Engineer.<br/>
+        Please see <a href="/about.html" data-pjax>About Win</a>
       </div>
       <div class="content content-right pull-right">
+        <div class="pagination">
+        <ul>
         
+        <li class="prev"><a href="/2013/09/13/ol_and_ul" title="ol, ul 的理解與誤用">&larr; Previous</a></li>
+        
+        <li><a href="/archive.html">Archive</a></li>
+        
+        <li class="next disabled"><a>Next &rarr;</a>
+        
+        </ul>
+        </div>
+
+        <div id="pjax-container">
+        
+<div id="post_html_wrap">
 <div class="page-header">
   <h1>Pure CSS 實作練習(一)：Homepage </h1>
 </div>
@@ -148,37 +169,34 @@
 
 <ul>
 <li>
-<p>Demo畫面1：（homepage/index.html）: <a href='http://winwu.github.io/pureCSS-practice/homepage/'><img alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' title='' /></a></p>
+<p>Demo畫面1：（homepage/index.html）: <a href='http://winwu.github.io/pureCSS-practice/homepage/'><img src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' alt='altTitle' title='' /></a></p>
 </li>
 
 <li>
-<p>Demo畫面2： <img alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' title='' /></p>
+<p>Demo畫面2： <img src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' alt='altTitle' title='' /></p>
 </li>
 </ul>
 
 <h3 id='id9'>測試</h3>
 
 <ul>
-<li><code>Firefix</code>, <code>Chrome</code> is OK。 * 還不算是很成熟的作品，應該會找時間整理頁面。 * 如果你有任何建議歡迎留言補充。</li>
+<li>Firefox, Chrome is OK * 還不算是很成熟的作品，應該會找時間整理頁面 * 如果你有任何建議歡迎留言補充。</li>
 </ul>
 
 <h3 id='id10'>一些建議</h3>
 
-<p>pureCSS在他的網頁上有寫到，如果你要在 <code>grid-u-?-?</code> 的div裡加上 padding（除非你那塊沒有文字，不然很難不加 padding），它上面有寫到你可以這樣做（如果不這麼做寬度就會太多只至於div往下掉）：</p>
-
-<p><code>
-.pure-g &gt; div {  
+<p>pureCSS在他的網頁上有寫到，如果你要在 <code>grid-u-?-?</code> 的 div 裡加上 padding（除非你那塊沒有文字，不然很難不加 padding），它上面有寫到你可以這樣做（如果不這麼做寬度就會太多只至於div往下掉）：</p>
+<pre>
+.pure-g > div {  
      box-sizing: border-box;   
    } 
-</code> 可是&#8230; 在我的 FireFox 整個大跑版，這時候你可以試試看補上-moz-box-sizing，如下範例。 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing'>參考網址</a>。</p>
-
-<p><code>
- .pure-g&gt;div{  
+</pre><br />
+<p>可是&#8230; 在我的 FireFox 整個大跑版，這時候你可以試試看補上-moz-box-sizing，如下範例。 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing'>參考網址</a>。</p>
+<pre>
+ .pure-g>div{  
    box-sizing: border-box;  
    -moz-box-sizing: border-box;   
- }  
-</code></p>
-
+ }</pre>
 <h3 id='author'>Author</h3>
 
 <ul>
@@ -187,8 +205,6 @@
 <li>Blog : <a href='http://yiyingloveart.blogspot.tw/'>http://yiyingloveart.blogspot.tw/</a></li>
 
 <li>Update Date : 2013-08-31</li>
-
-<li>License : MIT License</li>
 </ul>
     </div>
 
@@ -248,8 +264,10 @@
 
   </div>
 </div>
+</div>
 
 
+        </div>
       </div>
       <hr class="clearfix">
       <footer class="clearfix">
@@ -262,6 +280,14 @@
     </div>
 
     
+    <script>
+    //$('#pjax-container').hide().fadeIn(1000);
+    $(document).pjax('a[data-pjax]', '#pjax-container');
+    /*$(document).on('pjax:send', function() {
+      console.log('show');
+    });*/
+    $('#pjax-container').hide().fadeIn(1000);
+    </script>
   </body>
 </html>
 

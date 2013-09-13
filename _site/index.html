@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8">
     <title>Frontend Developer Note.</title>
@@ -30,20 +30,25 @@
     <!-- atom & rss feed -->
     <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-
+    <script type="text/javascript" src="/assets/themes/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/assets/themes/jquery.pjax.js"></script>
   </head>
 
   <body>
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
-          <a class="brand" href="/">Win.心得小筆記</a>
+          <a id="go2homepage" class="brand" href="/" data-pjax>Win.心得小筆記</a>
           <ul class="nav">
             
             
             
 
 
+  
+    
+      
+    
   
     
       
@@ -104,9 +109,24 @@
     <div class="container-narrow">
       <div class="content content-left pull-left">
         <h3>Hi</h3><h4>I am <span class="myname">Win</span></h4>
-        <i class="icon-github"></i>
+        <!--i class="icon-github"></i-->
+        Frontend Engineer.<br/>
+        Please see <a href="/about.html" data-pjax>About Win</a>
       </div>
       <div class="content content-right pull-right">
+        <div class="pagination">
+        <ul>
+        
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+        
+        <li><a href="/archive.html">Archive</a></li>
+        
+        <li class="next disabled"><a>Next &rarr;</a>
+        
+        </ul>
+        </div>
+
+        <div id="pjax-container">
         
 <div class="page-header">
   <h1>Frontend Developer Note.  <small>Just Share</small></h1>
@@ -115,23 +135,24 @@
 <div class="row-fluid">
   <div class="span12">
     <h2 id='latest_posts'>Latest Posts</h2>
-<ul class='posts'>
+<ul class='posts' id='latest_post_ul'>
   
-    <li><span>13 Sep 2013</span> &raquo; <a href='/2013/09/13/yui-purecss-practice'>Pure CSS 實作練習(一)：Homepage</a></li>
+    <li><span>13 Sep 2013</span> &raquo; <a href='/2013/09/13/yui-purecss-practice' data-pjax='#pjax-container'>Pure CSS 實作練習(一)：Homepage</a></li>
   
-    <li><span>13 Sep 2013</span> &raquo; <a href='/2013/09/13/ol_and_ul'>ol, ul 的理解與誤用</a></li>
+    <li><span>13 Sep 2013</span> &raquo; <a href='/2013/09/13/ol_and_ul' data-pjax='#pjax-container'>ol, ul 的理解與誤用</a></li>
   
-    <li><span>11 Sep 2013</span> &raquo; <a href='/2013/09/11/my-vim-note'>我的 Vim 指令筆記</a></li>
+    <li><span>11 Sep 2013</span> &raquo; <a href='/2013/09/11/my-vim-note' data-pjax='#pjax-container'>我的 Vim 指令筆記</a></li>
   
-    <li><span>10 Sep 2013</span> &raquo; <a href='/2013/09/10/how-to-use-zlip'>How To Use Zlip</a></li>
+    <li><span>10 Sep 2013</span> &raquo; <a href='/2013/09/10/how-to-use-zlip' data-pjax='#pjax-container'>How To Use Zlip</a></li>
   
-    <li><span>29 Dec 2011</span> &raquo; <a href='/lessons/2011/12/29/jekyll-introduction'>Jekyll Introduction</a></li>
+    <li><span>29 Dec 2011</span> &raquo; <a href='/lessons/2011/12/29/jekyll-introduction' data-pjax='#pjax-container'>Jekyll Introduction</a></li>
   
 </ul>
   </div>
 </div>
 
 
+        </div>
       </div>
       <hr class="clearfix">
       <footer class="clearfix">
@@ -144,6 +165,14 @@
     </div>
 
     
+    <script>
+    //$('#pjax-container').hide().fadeIn(1000);
+    $(document).pjax('a[data-pjax]', '#pjax-container');
+    /*$(document).on('pjax:send', function() {
+      console.log('show');
+    });*/
+    $('#pjax-container').hide().fadeIn(1000);
+    </script>
   </body>
 </html>
 

@@ -5,8 +5,8 @@
         <description>Win.心得小筆記 - Win Wu</description>
         <link>http://winwu.github.io</link>
         <link>http://winwu.github.io</link>
-        <lastBuildDate>2013-09-13T13:54:19+08:00</lastBuildDate>
-        <pubDate>2013-09-13T13:54:19+08:00</pubDate>
+        <lastBuildDate>2013-09-13T16:58:33+08:00</lastBuildDate>
+        <pubDate>2013-09-13T16:58:33+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -42,37 +42,34 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' title='' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' alt='altTitle' title='' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' title='' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' alt='altTitle' title='' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id='id9'&gt;測試&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Firefix&lt;/code&gt;, &lt;code&gt;Chrome&lt;/code&gt; is OK。 * 還不算是很成熟的作品，應該會找時間整理頁面。 * 如果你有任何建議歡迎留言補充。&lt;/li&gt;
+&lt;li&gt;Firefox, Chrome is OK * 還不算是很成熟的作品，應該會找時間整理頁面 * 如果你有任何建議歡迎留言補充。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id='id10'&gt;一些建議&lt;/h3&gt;
 
-&lt;p&gt;pureCSS在他的網頁上有寫到，如果你要在 &lt;code&gt;grid-u-?-?&lt;/code&gt; 的div裡加上 padding（除非你那塊沒有文字，不然很難不加 padding），它上面有寫到你可以這樣做（如果不這麼做寬度就會太多只至於div往下掉）：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-.pure-g &amp;gt; div {  
+&lt;p&gt;pureCSS在他的網頁上有寫到，如果你要在 &lt;code&gt;grid-u-?-?&lt;/code&gt; 的 div 裡加上 padding（除非你那塊沒有文字，不然很難不加 padding），它上面有寫到你可以這樣做（如果不這麼做寬度就會太多只至於div往下掉）：&lt;/p&gt;
+&lt;pre&gt;
+.pure-g &gt; div {  
      box-sizing: border-box;   
    } 
-&lt;/code&gt; 可是&amp;#8230; 在我的 FireFox 整個大跑版，這時候你可以試試看補上-moz-box-sizing，如下範例。 &lt;a href='https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing'&gt;參考網址&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
- .pure-g&amp;gt;div{  
+&lt;/pre&gt;&lt;br /&gt;
+&lt;p&gt;可是&amp;#8230; 在我的 FireFox 整個大跑版，這時候你可以試試看補上-moz-box-sizing，如下範例。 &lt;a href='https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing'&gt;參考網址&lt;/a&gt;。&lt;/p&gt;
+&lt;pre&gt;
+ .pure-g&gt;div{  
    box-sizing: border-box;  
    -moz-box-sizing: border-box;   
- }  
-&lt;/code&gt;&lt;/p&gt;
-
+ }&lt;/pre&gt;
 &lt;h3 id='author'&gt;Author&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -81,8 +78,6 @@
 &lt;li&gt;Blog : &lt;a href='http://yiyingloveart.blogspot.tw/'&gt;http://yiyingloveart.blogspot.tw/&lt;/a&gt;&lt;/li&gt;
 
 &lt;li&gt;Update Date : 2013-08-31&lt;/li&gt;
-
-&lt;li&gt;License : MIT License&lt;/li&gt;
 &lt;/ul&gt;</description>
                 <link>http://winwu.github.io/2013/09/13/yui-purecss-practice</link>
                 <guid>http://winwu.github.io/2013/09/13/yui-purecss-practice</guid>
