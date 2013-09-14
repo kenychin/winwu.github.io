@@ -4,7 +4,7 @@
  <title>Win.心得小筆記</title>
  <link href="http://winwu.github.io/" rel="self"/>
  <link href="http://winwu.github.io"/>
- <updated>2013-09-14T18:35:31+08:00</updated>
+ <updated>2013-09-14T18:48:29+08:00</updated>
  <id>http://winwu.github.io</id>
  <author>
    <name>Win Wu</name>
@@ -47,11 +47,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' title='' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' title='' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' title='' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' title='' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
