@@ -5,10 +5,32 @@
         <description>Win.心得小筆記 - Win Wu</description>
         <link>http://winwu.github.io</link>
         <link>http://winwu.github.io</link>
-        <lastBuildDate>2013-09-14T18:48:29+08:00</lastBuildDate>
-        <pubDate>2013-09-14T18:48:29+08:00</pubDate>
+        <lastBuildDate>2013-09-14T20:06:27+08:00</lastBuildDate>
+        <pubDate>2013-09-14T20:06:27+08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>第二站新開張</title>
+                <description>&lt;h2 id='win'&gt;歡迎來到，Win.心得小筆記第二站&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://yiyingloveart.blogspot.tw/'&gt;第一站網址&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dear All:&lt;/p&gt;
+
+&lt;p&gt;大家好，這裡是Win.心得小筆記第二站&lt;/p&gt;
+
+&lt;p&gt;功能跟排版，還是增強當中。&lt;/p&gt;
+
+&lt;p&gt;目前還不太會用 jekyll，blog 還很空洞，如果有任何建議，也歡迎告知，謝謝：）&lt;/p&gt;
+
+&lt;p&gt;祝 順心 Win&lt;/p&gt;</description>
+                <link>http://winwu.github.io/2013/09/14/my-second-blog</link>
+                <guid>http://winwu.github.io/2013/09/14/my-second-blog</guid>
+                <pubDate>2013-09-14T21:00:00+08:00</pubDate>
+        </item>
 
         <item>
                 <title>Pure CSS 實作練習(一)：Homepage</title>
@@ -42,11 +64,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' title='' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img width='100%' alt='altTitle' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' title='' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img width='100%' alt='altTitle' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
