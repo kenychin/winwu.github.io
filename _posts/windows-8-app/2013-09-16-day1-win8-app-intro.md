@@ -2,7 +2,7 @@
 layout: post
 category : Windows-8-app
 title : Day1:HTML5 X JavaScript 開發 Windows 8 Apps
-date: 2013-09-16 19:00:00
+date: 2013-09-16 16:00:00
 tagline: "Day1 開場白與環境介紹"
 tags : [windows 8 App]
 ---
