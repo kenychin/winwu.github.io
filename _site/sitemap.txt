@@ -9,6 +9,7 @@ http://winwu.github.io/rss.xml
 http://winwu.github.io/sitemap.txt
 http://winwu.github.io/tags.html
 
+http://winwu.github.io/windows-8-app/2013/09/17/day2-win8-app-ui
 http://winwu.github.io/windows-8-app/2013/09/16/day1-win8-app-intro
 http://winwu.github.io/2013/09/14/my-second-blog
 http://winwu.github.io/2013/09/13/yui-purecss-practice

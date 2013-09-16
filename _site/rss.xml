@@ -5,13 +5,152 @@
         <description>Win.心得小筆記 - Win Wu</description>
         <link>http://winwu.github.io</link>
         <link>http://winwu.github.io</link>
-        <lastBuildDate>2013-09-16T18:22:43+08:00</lastBuildDate>
-        <pubDate>2013-09-16T18:22:43+08:00</pubDate>
+        <lastBuildDate>2013-09-17T00:45:46+08:00</lastBuildDate>
+        <pubDate>2013-09-17T00:45:46+08:00</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
-                <title>Day1:HTML5 X JavaScript 開發 Windows 8 Apps</title>
+                <title>Day2 windows 8 的界面設計(Windows UI)</title>
+                <description>&lt;h2 id='day2_windows_8_windows_ui'&gt;Day2 windows 8 的界面設計(Windows UI)&lt;/h2&gt;
+
+&lt;p&gt;大家看到 win8 的開始畫面，有沒有覺得一格一格的，裡面還有東西會亂動XD 有人稱他 &lt;code&gt;Metro Style&lt;/code&gt; ，但我喜歡稱他 &lt;code&gt;Windows UI&lt;/code&gt;，因為在開發 App 的時候，我都是用 &lt;code&gt;WinJS.UI&lt;/code&gt; 去產生這些畫面上的元素，但也不是一定，你也可以很自由的設計你的界面，為什麼用自由這兩個字呢，既然都說是用 HTML開發了，你要像做 web 一樣 coding HTML 在 windows 8 App 也是會通的。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id='windows_ui_'&gt;Windows UI 有以下幾點特色&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;* 簡潔利落的排版風格
+* 內容重於形式 (Windows UI 的設計精髓是 Content Before Chrome)
+* 快速且流暢轉場效果
+* 動態磚
+* 橫向移動與Ｃ模型配置
+* 頁面具有階層式的導航模式，清楚的資料層級&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='id14'&gt;Ｃ模型配置示意圖&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img src='/images/windows-8-app/day2-11.png' alt='C模型配置' /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id='windows_8_app_layout'&gt;Windows 8 App Layout&lt;/h2&gt;
+
+&lt;p&gt;對於 Layout 的排版方式，也是很講究的，請參考：&lt;a href='http://msdn.microsoft.com/en-us/library/windows/apps/hh872191.aspx'&gt;Windows-Dev Center - Windows Store apps : Laying out an app page&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;針對上面的連結，我有稍微做了一點整理：&lt;/p&gt;
+
+&lt;h3 id='grid_system_'&gt;Grid System 網格系統：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;網格系統是由 &lt;code&gt;unit&lt;/code&gt; 跟 &lt;code&gt;sub-units&lt;/code&gt; 所組成，每一個 unit 約等於 &lt;code&gt;20 X 20&lt;/code&gt; px 的正方體，每一個 unit 裡面可以包含 &lt;code&gt;16&lt;/code&gt;個 &lt;code&gt;5 X 5&lt;/code&gt; px 的 sub-units。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='page_header_'&gt;Page Header 頁面標頭：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;標頭的 baseline 應該要距離最上方 5 個 units 的大小（或者是跟最上方距離100px）， 標頭距離左側應該要有 6 個 units 的大小 (或者是跟左方距離120px)，標頭的字體是 SegoeUI Stylistic Set 20, light weight 。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='content_region_'&gt;Content Region 中間區域：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;margin-top 約 7 個 units 的大小（或者說 140px）; left-margin 約 6 個 units 的大小（或者說 120px); margin-bottom 可以自由擴展，沒有限制。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='id15'&gt;關於字型：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在開發任何 App，盡量使用統一的字型。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;可以使用 Windows Library 的樣式表。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Windows 8 App 所採用的首選字型是 &lt;code&gt;Segoe UI&lt;/code&gt; (常用在按鈕或選擇器)，但首選的__中文字型__是 &lt;code&gt;微軟正黑體&lt;/code&gt;，那麼到底什麼時候開採用什麼字型，官網有些說明，可以參考&lt;a href='http://msdn.microsoft.com/zh-tw/library/windows/apps/hh700394.aspx'&gt;字型的指導方針 (Windows 市集應用程式)&lt;/a&gt;。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;JavaScript 的 Windows Library提供以下幾種 Segoe UI，差別在於粗細：(以下資料來自&lt;a href='http://msdn.microsoft.com/zh-tw/library/windows/apps/hh700394.aspx'&gt;字型的指導方針 (Windows 市集應用程式)&lt;/a&gt;) &lt;ul&gt;
+&lt;li&gt;Segoe UI Light：粗細為 200 的 Segoe UI。&lt;/li&gt;
+&lt;li&gt;Segoe UI Semilight：粗細為 300 的 Segoe UI。&lt;/li&gt;
+&lt;li&gt;Segoe UI：一般粗細 400 的 Segoe UI。&lt;/li&gt;
+&lt;li&gt;Segoe UI Semibold：粗細為 600 的 Segoe UI。&lt;/li&gt;
+&lt;li&gt;Segoe UI Bold：粗細為 700 的 Segoe UI。&lt;/li&gt;
+&lt;/ul&gt; * 當只要指定特定粗細的文字樣式時，可以這樣寫&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;p style=&amp;quot;font-family: &amp;#39;Segoe UI Semibold&amp;#39;&amp;quot;&amp;gt;Semibold text&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;關於字型的部分歡迎參考 &lt;a href='http://en.wikipedia.org/wiki/Segoe'&gt;wiki Segoe&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id='_windows_8_app_'&gt;一些 Windows 8 App 的畫面&lt;/h2&gt;
+
+&lt;p&gt;為了怕沒有 window 8 的人不知道 window8 的一些畫面，所以截了一些圖片。&lt;/p&gt;
+
+&lt;p&gt;起始畫面，通常會看到畫面有很多&lt;code&gt;動態磚(Live Tile)&lt;/code&gt;，win8 的四邊通常會藏有些功能，比方說右邊是&lt;code&gt;『系統快速鍵』&lt;/code&gt;; 上下方是&lt;code&gt;『Application Bar (App Bar)』&lt;/code&gt;(上方通常是導覽用途，下方通常是功能用途)，左邊是&lt;code&gt;『呼叫系統快速鍵』&lt;/code&gt;（你開過沒有關的app會在左邊）。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src='/images/windows-8-app/day2-1.png' alt='day2-1' /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src='/images/windows-8-app/day2-2.png' alt='day2-2' /&gt;&lt;/p&gt;
+
+&lt;h3 id='appbar_application_bar'&gt;AppBar (Application Bar)&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src='/images/windows-8-app/day2-10.png' alt='day2-10' /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src='/images/windows-8-app/day2-3.png' alt='day2-3' /&gt;&lt;/p&gt;
+
+&lt;h3 id='id16'&gt;表單元素&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src='/images/windows-8-app/day2-4.png' alt='day2-4' /&gt;&lt;/p&gt;
+
+&lt;h3 id='search_bar_'&gt;Search Bar 搜尋框&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src='/images/windows-8-app/day2-5.png' alt='day2-5' /&gt;&lt;/p&gt;
+
+&lt;h3 id='_appbar_'&gt;有 AppBar 的例子&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src='/images/windows-8-app/day2-6.png' alt='day2-6' /&gt; &lt;img src='/images/windows-8-app/day2-7.png' alt='day2-7' /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id='windows_8_strore_'&gt;Windows 8 Strore 看看有哪些現成的作品&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(此圖截自：http://windows.microsoft.com/zh-tw/windows-8/apps#Cat=t1)&lt;/li&gt;
+
+&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img src='/images/windows-8-app/day2-8.png' alt='day2-8' /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;(此圖截自：http://apps.microsoft.com/windows/zh-tw/app/windows-8/d59f025f-8cf2-422e-b204-0684e9125501)&lt;/li&gt;
+
+&lt;li&gt;看看別人的 App 寫出來的樣子，這些都是很好的參考，我可能會最後會寫個 Windows 8 App 企劃書吧。&lt;/li&gt;
+
+&lt;li&gt;&lt;img src='/images/windows-8-app/day2-9.png' alt='day2-9' /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;本來想寫一些 windows8 的操作/觸控方式，不過我沒有平板:P，此部分忍痛跳過。&lt;/p&gt;
+
+&lt;h3 id='id17'&gt;參考資源&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://msdn.microsoft.com/'&gt;http://msdn.microsoft.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下一篇我還沒有想到要寫什麼，明天再看:P&lt;/p&gt;
+
+&lt;p&gt;本篇同時轉載於 &lt;a href='http://ithelp.ithome.com.tw/ironman6/player/yiying/dev/1'&gt;iT邦幫忙鐵人賽&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;如有任何問題，歡迎留言。雖然我不一定會 :P，不過會盡量解答。&lt;/p&gt;</description>
+                <link>http://winwu.github.io/windows-8-app/2013/09/17/day2-win8-app-ui</link>
+                <guid>http://winwu.github.io/windows-8-app/2013/09/17/day2-win8-app-ui</guid>
+                <pubDate>2013-09-17T12:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Day1 開場白與環境介紹</title>
                 <description>&lt;h2 id='day1_'&gt;Day1 開場白與環境介紹&lt;/h2&gt;
 
 &lt;blockquote&gt;
@@ -155,11 +294,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' alt='altTitle' title='' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' title='' alt='altTitle' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' alt='altTitle' title='' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' title='' alt='altTitle' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
