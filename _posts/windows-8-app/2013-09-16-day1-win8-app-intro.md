@@ -12,7 +12,7 @@ tags : [windows 8 App]
 >訂主題，不是一件簡單的事情...
 
 大家好，我是win，
-<img src="../../images/windows-8-app/day1-0.png" width="100%"/>
+<img src="../images/windows-8-app/day1-0.png" width="100%"/>
 目前是一位菜 Frontend，第一次參加鐵人賽，覺得有趣就也報名了，雖然平常就有在寫文章的習慣，不過還沒有試過連續30天發文。
 
 ---
