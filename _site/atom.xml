@@ -4,13 +4,174 @@
  <title>Win.心得小筆記</title>
  <link href="http://winwu.github.io/" rel="self"/>
  <link href="http://winwu.github.io"/>
- <updated>2013-09-14T20:11:53+08:00</updated>
+ <updated>2013-09-16T11:49:07+08:00</updated>
  <id>http://winwu.github.io</id>
  <author>
    <name>Win Wu</name>
    <email>yiyingwu.1990@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Day2:HTML5 X JavaScript 開發 Windows 8 Apps</title>
+   <link href="http://winwu.github.io/windows-8-app/2013/09/17/day2-win8-app-ui"/>
+   <updated>2013-09-17T19:00:00+08:00</updated>
+   <id>http://winwu.github.io/windows-8-app/2013/09/17/day2-win8-app-ui</id>
+   <content type="html">&lt;h2 id='day2_windows_8_windows_ui'&gt;Day2 windows 8 的界面設計(Windows UI)&lt;/h2&gt;
+
+&lt;p&gt;大家看到 win8 的開始畫面，有沒有覺得一格一格的，裡面還有東西會亂動XD 有人稱他 &lt;code&gt;Metro Style&lt;/code&gt; ，但我喜歡稱他 &lt;code&gt;Windows UI&lt;/code&gt;，因為在開發 App 的時候，我都是用 &lt;code&gt;WinJS.UI&lt;/code&gt; 去產生這些畫面上的元素，但也不是一定，你也可以很自由的設計你的界面。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id='windows_ui_'&gt;Windows UI 有以下幾點特色&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;* 簡潔利落的排版風格
+* 內容重於形式
+* 快速且流暢轉場效果
+* 動態磚
+* 橫向移動&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2 id='windows_8_app_layout'&gt;Windows 8 App Layout&lt;/h2&gt;
+
+&lt;p&gt;對於 Layout 的排版方式，也是很講究的，請參考：&lt;a href='http://msdn.microsoft.com/en-us/library/windows/apps/hh872191.aspx'&gt;Laying out an app page&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;針對上面的連結，我有稍微做了一點整理：&lt;/p&gt;
+
+&lt;h3 id='grid_system_'&gt;Grid System 網格系統：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;網格系統是由 &lt;code&gt;unit&lt;/code&gt; 跟 &lt;code&gt;sub-units&lt;/code&gt; 所組成，每一個 unit 約等於 &lt;code&gt;20 X 20&lt;/code&gt; px 的正方體，每一個 unit 裡面可以包含 &lt;code&gt;16&lt;/code&gt;個 &lt;code&gt;5 X 5&lt;/code&gt; px 的 sub-units。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='page_header_'&gt;Page Header 頁面標頭：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;標頭的 baseline 應該要距離最上方 5 個 units 的大小（或者是跟最上方距離100px）， 標頭距離左側應該要有 6 個 units 的大小 (或者是跟左方距離120px)，標頭的字體是 SegoeUI Stylistic Set 20, light weight 。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='content_region_'&gt;Content Region 中間區域：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;margin-top 約 7 個 units 的大小（或者說 140px）; left-margin 約 6 個 units 的大小（或者說 120px); margin-bottom 可以自由擴展，沒有限制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id='_windows_8_app_'&gt;一些 Windows 8 App 的畫面&lt;/h2&gt;
+
+&lt;p&gt;為了怕沒有 window 8 的人不知道 window8 的一些畫面，所以截了一些圖片。&lt;/p&gt;
+
+&lt;p&gt;起始畫面，通常會看到畫面有很多&lt;code&gt;動態磚(Live Tile)&lt;/code&gt;，win8 的四邊通常會藏有些功能，比方說右邊是&lt;code&gt;『系統快速鍵』&lt;/code&gt;; 上下方是&lt;code&gt;『Application Bar (App Bar)』&lt;/code&gt;(上方通常是導覽用途，下方通常是功能用途)，左邊是&lt;code&gt;『呼叫系統快速鍵』&lt;/code&gt;（你開過沒有關的app會在左邊）。&lt;/p&gt;
+&lt;img width='100%' src='../../images/windows-8-app/day2-1.png' /&gt;&lt;img width='100%' src='../../images/windows-8-app/day2-2.png' /&gt;
+&lt;h3 id='appbar_application_bar'&gt;AppBar (Application Bar)&lt;/h3&gt;
+&lt;img width='100%' src='../../images/windows-8-app/day2-10.png' /&gt;&lt;img width='100%' src='../../images/windows-8-app/day2-3.png' /&gt;
+&lt;h3 id='id14'&gt;表單元素&lt;/h3&gt;
+&lt;img width='100%' src='../../images/windows-8-app/day2-4.png' /&gt;
+&lt;h3 id='search_bar_'&gt;Search Bar 搜尋框&lt;/h3&gt;
+&lt;img width='50%' src='../../images/windows-8-app/day2-5.png' /&gt;
+&lt;h3 id='_appbar_'&gt;有 AppBar 的例子&lt;/h3&gt;
+&lt;img width='100%' src='../../images/windows-8-app/day2-6.png' /&gt;&lt;img width='100%' src='../../images/windows-8-app/day2-7.png' /&gt;&lt;hr /&gt;
+&lt;h3 id='windows_8_strore_'&gt;Windows 8 Strore 看看有哪些現成的作品&lt;/h3&gt;
+
+&lt;p&gt;(此圖截自：http://windows.microsoft.com/zh-tw/windows-8/apps#Cat=t1)&lt;/p&gt;
+
+&lt;p&gt;可以點選一些 App 看看裡面的內容。 &lt;img width='100%' src='../../images/windows-8-app/day2-8.png' /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;(此圖截自：http://apps.microsoft.com/windows/zh-tw/app/windows-8/d59f025f-8cf2-422e-b204-0684e9125501) 看看別人的 App 寫出來的樣子，這些都是很好的參考。 &lt;img width='100%' src='../../images/windows-8-app/day2-9.png' /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;本來想寫一些 windows8 的操作/觸控方式，不過我沒有平板:P，此部分忍痛跳過。&lt;/p&gt;
+
+&lt;p&gt;下一篇我還沒有想到要寫什麼，明天再看:P&lt;/p&gt;
+
+&lt;p&gt;本篇同時轉載於 &lt;a href='http://ithelp.ithome.com.tw/'&gt;it邦幫忙&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;如有任何問題，歡迎留言。雖然我不一定會 :P&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Day1:HTML5 X JavaScript 開發 Windows 8 Apps</title>
+   <link href="http://winwu.github.io/windows-8-app/2013/09/16/day1-win8-app-intro"/>
+   <updated>2013-09-16T19:00:00+08:00</updated>
+   <id>http://winwu.github.io/windows-8-app/2013/09/16/day1-win8-app-intro</id>
+   <content type="html">&lt;h2 id='day1_'&gt;Day1 開場白與環境介紹&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;訂主題，不是一件簡單的事情&amp;#8230;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;大家好，我是win， &lt;img width='100%' src='../../images/windows-8-app/day1-0.png' /&gt; 目前是一位菜 Frontend，第一次參加鐵人賽，覺得有趣就也報名了，雖然平常就有在寫文章的習慣，不過還沒有試過連續30天發文。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id='id11'&gt;關於主題&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;這次的主題是『用 HTML5 和 JavaScript 學習開發 Windows Apps』，嚴格來說是 Windows 8 App 啦，好多人都以為我要寫 Windows Phone，可是我沒 Phone 可玩&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img width='100%' src='../../images/windows-8-app/day1-1.png' /&gt;
+&lt;p&gt;（windows 8 開始畫面）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不知道是不是有人開始用 windows 8 了？（以下偶爾會直接簡稱 win8），大部份的朋友，不是不習慣去適應這種全新的界面，不然就是還沒更新到 Windows 8 ，我反而是因為被 Window App 的設計給吸引，而升級自己的電腦從 windows 7 到 windows 8，一直以來，一直沒寫過 App，也沒有碰過 Visual Studio 這種工具，所以學 Windows 8 App 對我來說，有各式各樣的嘗試與挑戰，目前我也不是靠寫 Win8 App 維生&amp;#8230;我是帶著好奇心去學習怎麼開發的。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;希望藉由這次鐵人賽，邊玩邊學邊分享，我唯一的夢想，就是希望能真的撐到 30 天吶！（每次想到30這個數字都讓我很有壓力XD）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;放心，我不會教大家怎麼用 win8，因為我也不熟，我只會用搜尋，然後開IDE&amp;#8230;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;當然了，我相信過程也會有很多我自己需要去克服的事情，尤其開發 Windows 8 App 的中文資源實在不多，比賽當中所發表的文章，也歡迎大家不吝指教，希望大家用輕鬆愉快的角度看看我的文章就可以了，甚至我還擔心我寫到最後不知道我在寫什麼呢 XD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id='id12'&gt;開始之前的準備。。。&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;如果你沒有 windows 8，那你可以考慮跟我一樣先裝 8.1 Preview ，可&lt;a href='http://windows.microsoft.com/zh-tw/windows-8/preview
+'&gt;參考此網址&lt;/a&gt;。再來，如果對 windows 8 沒興趣，也歡迎看看就好：）&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;接著，如果也要一起玩，請裝 Visual Studio 2012，可&lt;a href='http://www.microsoft.com/visualstudio/cht/downloads'&gt;參考此網址&lt;/a&gt;，我是安裝試用版，可以&lt;code&gt;90&lt;/code&gt;天試用。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;visual studio 2012 硬體要求： &lt;ul&gt;
+&lt;li&gt;10G 以上的硬碟空間&lt;/li&gt;
+&lt;li&gt;1G 以上的RAM&lt;/li&gt;
+&lt;li&gt;1.6GHz 或者更快的處理器&lt;/li&gt;
+&lt;li&gt;x86或x64都可以&lt;/li&gt;
+&lt;/ul&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;對了，千萬不要偷懶只安裝&lt;/strong&gt; Visual Studio 2012 而不打算把 win7 升級成 win8，因為一定要是 win8 的作業系統才有辦法在 Visual Studio 2012 看到 window8市集的範本選項（再往後的章節會提到）。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;裝 Visual Studio 要等一陣子，可以買杯茶再回家&amp;#8230;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;補充：Visual Studio 有四種版本： &lt;ul&gt;
+&lt;li&gt;Ultimate （我是安裝此版本)&lt;/li&gt;
+&lt;li&gt;Preminum&lt;/li&gt;
+&lt;li&gt;Professional&lt;/li&gt;
+&lt;li&gt;Test Professional&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id='id13'&gt;總結一下今天要做的事：&lt;/h2&gt;
+&lt;img width='100%' src='../../images/windows-8-app/day1-3.png' /&gt;
+&lt;p&gt;如果你成功安裝完成後，開開看 Visual Studio 2012 吧！ 希望你/妳會跟我看到類似的畫面。 (之後我們會很常看到這個畫面XD)&lt;/p&gt;
+&lt;img width='50%' src='../../images/windows-8-app/day1-2.png' /&gt;&lt;hr /&gt;
+&lt;p&gt;今日進度結束， 下一篇，可能是淺談 windows 8 的界面設計。&lt;/p&gt;
+
+&lt;p&gt;本篇同時轉載於 &lt;a href='http://ithelp.ithome.com.tw/'&gt;it邦幫忙&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;如有任何問題，歡迎留言。雖然我不一定會 :P&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>第二站新開張</title>
@@ -71,11 +232,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' title='' width='100%' alt='altTitle' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img title='' alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' title='' width='100%' alt='altTitle' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img title='' alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
