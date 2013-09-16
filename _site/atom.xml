@@ -4,7 +4,7 @@
  <title>Win.心得小筆記</title>
  <link href="http://winwu.github.io/" rel="self"/>
  <link href="http://winwu.github.io"/>
- <updated>2013-09-17T00:45:46+08:00</updated>
+ <updated>2013-09-17T00:55:58+08:00</updated>
  <id>http://winwu.github.io</id>
  <author>
    <name>Win Wu</name>
@@ -33,7 +33,7 @@
 &lt;h3 id='id14'&gt;Ｃ模型配置示意圖&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img src='/images/windows-8-app/day2-11.png' alt='C模型配置' /&gt;&lt;/li&gt;
+&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170026295237313533897_resize.png' /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id='windows_8_app_layout'&gt;Windows 8 App Layout&lt;/h2&gt;
@@ -97,43 +97,21 @@
 &lt;p&gt;為了怕沒有 window 8 的人不知道 window8 的一些畫面，所以截了一些圖片。&lt;/p&gt;
 
 &lt;p&gt;起始畫面，通常會看到畫面有很多&lt;code&gt;動態磚(Live Tile)&lt;/code&gt;，win8 的四邊通常會藏有些功能，比方說右邊是&lt;code&gt;『系統快速鍵』&lt;/code&gt;; 上下方是&lt;code&gt;『Application Bar (App Bar)』&lt;/code&gt;(上方通常是導覽用途，下方通常是功能用途)，左邊是&lt;code&gt;『呼叫系統快速鍵』&lt;/code&gt;（你開過沒有關的app會在左邊）。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src='/images/windows-8-app/day2-1.png' alt='day2-1' /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src='/images/windows-8-app/day2-2.png' alt='day2-2' /&gt;&lt;/p&gt;
-
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031095237324dd239e_resize.png' /&gt;&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003117523732557dddf_resize.png' /&gt;
 &lt;h3 id='appbar_application_bar'&gt;AppBar (Application Bar)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src='/images/windows-8-app/day2-10.png' alt='day2-10' /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src='/images/windows-8-app/day2-3.png' alt='day2-3' /&gt;&lt;/p&gt;
-
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/2013091700315152373277e93bf_resize.png' /&gt;&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031585237327ee82a3_resize.png' /&gt;
 &lt;h3 id='id16'&gt;表單元素&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src='/images/windows-8-app/day2-4.png' alt='day2-4' /&gt;&lt;/p&gt;
-
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003303523732bf09f63_resize.png' /&gt;
 &lt;h3 id='search_bar_'&gt;Search Bar 搜尋框&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src='/images/windows-8-app/day2-5.png' alt='day2-5' /&gt;&lt;/p&gt;
-
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003313523732c910935_resize.png' /&gt;
 &lt;h3 id='_appbar_'&gt;有 AppBar 的例子&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src='/images/windows-8-app/day2-6.png' alt='day2-6' /&gt; &lt;img src='/images/windows-8-app/day2-7.png' alt='day2-7' /&gt;&lt;/p&gt;
-&lt;hr /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003323523732d39ac7d_resize.png' /&gt;&lt;hr /&gt;
 &lt;h3 id='windows_8_strore_'&gt;Windows 8 Strore 看看有哪些現成的作品&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;(此圖截自：http://windows.microsoft.com/zh-tw/windows-8/apps#Cat=t1)&lt;/li&gt;
 
-&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img src='/images/windows-8-app/day2-8.png' alt='day2-8' /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;ul&gt;
-&lt;li&gt;(此圖截自：http://apps.microsoft.com/windows/zh-tw/app/windows-8/d59f025f-8cf2-422e-b204-0684e9125501)&lt;/li&gt;
-
-&lt;li&gt;看看別人的 App 寫出來的樣子，這些都是很好的參考，我可能會最後會寫個 Windows 8 App 企劃書吧。&lt;/li&gt;
-
-&lt;li&gt;&lt;img src='/images/windows-8-app/day2-9.png' alt='day2-9' /&gt;&lt;/li&gt;
+&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003403523732fb568b9_resize.png' /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;本來想寫一些 windows8 的操作/觸控方式，不過我沒有平板:P，此部分忍痛跳過。&lt;/p&gt;
@@ -299,11 +277,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' title='' alt='altTitle' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img title='' alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' title='' alt='altTitle' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img title='' alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 

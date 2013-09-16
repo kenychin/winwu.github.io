@@ -17,6 +17,7 @@ tags : [windows 8 App]
 ---
 
 ##Windows UI 有以下幾點特色
+
 	* 簡潔利落的排版風格
 	* 內容重於形式 (Windows UI 的設計精髓是 Content Before Chrome)
 	* 快速且流暢轉場效果
@@ -26,8 +27,7 @@ tags : [windows 8 App]
 
 ###Ｃ模型配置示意圖
 * C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。
- ![C模型配置]({{ site.url }}/images/windows-8-app/day2-11.png)
-
+ <img src="http://ithelp.ithome.com.tw/upload/images/20130917/201309170026295237313533897_resize.png" width="100%"/>
 
 ---
 
@@ -69,40 +69,31 @@ tags : [windows 8 App]
 
 起始畫面，通常會看到畫面有很多`動態磚(Live Tile)`，win8 的四邊通常會藏有些功能，比方說右邊是`『系統快速鍵』`; 上下方是`『Application Bar (App Bar)』`(上方通常是導覽用途，下方通常是功能用途)，左邊是`『呼叫系統快速鍵』`（你開過沒有關的app會在左邊）。
 
- ![day2-1]({{ site.url }}/images/windows-8-app/day2-1.png)
-
- ![day2-2]({{ site.url }}/images/windows-8-app/day2-2.png)
+ <img src="http://ithelp.ithome.com.tw/upload/images/20130917/201309170031095237324dd239e_resize.png" width="100%"/>
+  <img src="http://ithelp.ithome.com.tw/upload/images/20130917/20130917003117523732557dddf_resize.png" width="100%"/>
 
 
 ###AppBar (Application Bar)
- ![day2-10]({{ site.url }}/images/windows-8-app/day2-10.png)
+<img src="http://ithelp.ithome.com.tw/upload/images/20130917/2013091700315152373277e93bf_resize.png" width="100%"/>
 
- ![day2-3]({{ site.url }}/images/windows-8-app/day2-3.png)
- 
+<img src="http://ithelp.ithome.com.tw/upload/images/20130917/201309170031585237327ee82a3_resize.png" width="100%"/>
+
 ###表單元素
-![day2-4]({{ site.url }}/images/windows-8-app/day2-4.png)
-
+<img src="http://ithelp.ithome.com.tw/upload/images/20130917/20130917003303523732bf09f63_resize.png" width="100%"/>
 ###Search Bar 搜尋框
-![day2-5]({{ site.url }}/images/windows-8-app/day2-5.png)
+<img src="http://ithelp.ithome.com.tw/upload/images/20130917/20130917003313523732c910935_resize.png" width="100%"/>
+
 
 ###有 AppBar 的例子
-![day2-6]({{ site.url }}/images/windows-8-app/day2-6.png)
-![day2-7]({{ site.url }}/images/windows-8-app/day2-7.png)
-
+<img src="http://ithelp.ithome.com.tw/upload/images/20130917/20130917003323523732d39ac7d_resize.png" width="100%"/>
 
 ---
 
 ###Windows 8 Strore 看看有哪些現成的作品
 * (此圖截自：http://windows.microsoft.com/zh-tw/windows-8/apps#Cat=t1)
 * 可以點選一些 App 看看裡面的內容。
-![day2-8]({{ site.url }}/images/windows-8-app/day2-8.png)
+<img src="http://ithelp.ithome.com.tw/upload/images/20130917/20130917003403523732fb568b9_resize.png" width="100%"/>
 
----
-
-
-* (此圖截自：http://apps.microsoft.com/windows/zh-tw/app/windows-8/d59f025f-8cf2-422e-b204-0684e9125501)
-* 看看別人的 App 寫出來的樣子，這些都是很好的參考，我可能會最後會寫個 Windows 8 App 企劃書吧。
-* ![day2-9]({{ site.url }}/images/windows-8-app/day2-9.png)
 
 ---
 
