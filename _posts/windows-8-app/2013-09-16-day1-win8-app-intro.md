@@ -12,7 +12,7 @@ tags : [windows 8 App]
 >訂主題，不是一件簡單的事情...
 
 大家好，我是win，
-<img src="/images/windows-8-app/day1-0.png" width="100%"/>
+<!--img src="/images/windows-8-app/day1-0.png" width="100%"/-->
 目前是一位菜 Frontend，第一次參加鐵人賽，覺得有趣就也報名了，雖然平常就有在寫文章的習慣，不過還沒有試過連續30天發文。
 
 ---
@@ -21,7 +21,7 @@ tags : [windows 8 App]
 
 * 這次的主題是『用 HTML5 和 JavaScript 學習開發 Windows Apps』，嚴格來說是 Windows 8 App 啦，好多人都以為我要寫 Windows Phone，可是我沒 Phone 可玩...
 
-<img src="/images/windows-8-app/day1-1.png" width="100%"/>
+<img src="http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png" width="100%"/>
 （windows 8 開始畫面）
 
 * 不知道是不是有人開始用 windows 8 了？（以下偶爾會直接簡稱 win8），大部份的朋友，不是不習慣去適應這種全新的界面，不然就是還沒更新到 Windows 8 ，我反而是因為被 Window App 的設計給吸引，而升級自己的電腦從 windows 7 到 windows 8，一直以來，一直沒寫過 App，也沒有碰過 Visual Studio 這種工具，所以學 Windows 8 App 對我來說，有各式各樣的嘗試與挑戰，目前我也不是靠寫 Win8 App 維生...我是帶著好奇心去學習怎麼開發的。
@@ -65,13 +65,13 @@ tags : [windows 8 App]
 ---
 
 ##總結一下今天要做的事：
-<img src="/images/windows-8-app/day1-3.png" width="100%"/>
+<img src="http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png" width="100%"/>
 
 如果你成功安裝完成後，開開看 Visual Studio 2012 吧！
 希望你/妳會跟我看到類似的畫面。
 (之後我們會很常看到這個畫面XD)
 
-<img src="/images/windows-8-app/day1-2.png" width="50%"/>
+<img src="http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png" width="50%"/>
 
 ---
 
@@ -79,6 +79,8 @@ tags : [windows 8 App]
 今日進度結束，
 下一篇，可能是淺談 windows 8 的界面設計。
 
-本篇同時轉載於 [it邦幫忙](http://ithelp.ithome.com.tw/)。
+本篇同時轉載於 [it邦幫忙](http://ithelp.ithome.com.tw/question/10126693)。
 
 如有任何問題，歡迎留言。雖然我不一定會 :P，但盡可能找到 reference 或解答。
+
+<script src="http://ithelp.ithome.com.tw/ironman6/sticker/dev/20061739"></script>
