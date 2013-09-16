@@ -82,5 +82,3 @@ tags : [windows 8 App]
 本篇同時轉載於 [it邦幫忙](http://ithelp.ithome.com.tw/question/10126693)。
 
 如有任何問題，歡迎留言。雖然我不一定會 :P，但盡可能找到 reference 或解答。
-
-<script src="http://ithelp.ithome.com.tw/ironman6/sticker/dev/20061739"></script>
