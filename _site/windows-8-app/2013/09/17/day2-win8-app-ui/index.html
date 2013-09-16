@@ -3,7 +3,7 @@
 <html lang="zh-TW">
   <head>
     <meta charset="utf-8">
-    <title>Day1:HTML5 X JavaScript 開發 Windows 8 Apps</title>
+    <title>Day2:HTML5 X JavaScript 開發 Windows 8 Apps</title>
     
     <meta name="author" content="Win Wu">
 
@@ -118,7 +118,7 @@
         <div class="pagination">
         <ul>
         
-        <li class="prev"><a href="/2013/09/14/my-second-blog" title="第二站新開張">&larr; Previous</a></li>
+        <li class="prev"><a href="/windows-8-app/2013/09/16/day1-win8-app-intro" title="Day1:HTML5 X JavaScript 開發 Windows 8 Apps">&larr; Previous</a></li>
         
         <li><a href="/archive.html">Archive</a></li>
         
@@ -131,97 +131,80 @@
         
 <div id="post_html_wrap">
 <div class="page-header">
-  <h1>Day1:HTML5 X JavaScript 開發 Windows 8 Apps <small>Day1 開場白與環境介紹</small></h1>
+  <h1>Day2:HTML5 X JavaScript 開發 Windows 8 Apps <small>Day2 windows 8 的界面設計(Windows UI)</small></h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>16 September 2013</span>
+      <span>17 September 2013</span>
     </div>
     <div class="content">
-      <h2 id='day1_'>Day1 開場白與環境介紹</h2>
+      <h2 id='day2_windows_8_windows_ui'>Day2 windows 8 的界面設計(Windows UI)</h2>
 
-<blockquote>
-<p>訂主題，不是一件簡單的事情&#8230;</p>
-</blockquote>
-
-<p>大家好，我是win， <img width='100%' src='../../images/windows-8-app/day1-0.png' /> 目前是一位菜 Frontend，第一次參加鐵人賽，覺得有趣就也報名了，雖然平常就有在寫文章的習慣，不過還沒有試過連續30天發文。</p>
+<p>大家看到 win8 的開始畫面，有沒有覺得一格一格的，裡面還有東西會亂動XD 有人稱他 <code>Metro Style</code> ，但我喜歡稱他 <code>Windows UI</code>，因為在開發 App 的時候，我都是用 <code>WinJS.UI</code> 去產生這些畫面上的元素，但也不是一定，你也可以很自由的設計你的界面。</p>
 <hr />
-<h2 id='id11'>關於主題</h2>
+<h2 id='windows_ui_'>Windows UI 有以下幾點特色</h2>
 
-<ul>
-<li>這次的主題是『用 HTML5 和 JavaScript 學習開發 Windows Apps』，嚴格來說是 Windows 8 App 啦，好多人都以為我要寫 Windows Phone，可是我沒 Phone 可玩&#8230;</li>
-</ul>
-<img width='100%' src='../../images/windows-8-app/day1-1.png' />
-<p>（windows 8 開始畫面）</p>
-
-<ul>
-<li>
-<p>不知道是不是有人開始用 windows 8 了？（以下偶爾會直接簡稱 win8），大部份的朋友，不是不習慣去適應這種全新的界面，不然就是還沒更新到 Windows 8 ，我反而是因為被 Window App 的設計給吸引，而升級自己的電腦從 windows 7 到 windows 8，一直以來，一直沒寫過 App，也沒有碰過 Visual Studio 這種工具，所以學 Windows 8 App 對我來說，有各式各樣的嘗試與挑戰，目前我也不是靠寫 Win8 App 維生&#8230;我是帶著好奇心去學習怎麼開發的。</p>
-</li>
-
-<li>
-<p>希望藉由這次鐵人賽，邊玩邊學邊分享，我唯一的夢想，就是希望能真的撐到 30 天吶！（每次想到30這個數字都讓我很有壓力XD）</p>
-</li>
-</ul>
-
-<blockquote>
-<p>放心，我不會教大家怎麼用 win8，因為我也不熟，我只會用搜尋，然後開IDE&#8230;。</p>
-</blockquote>
-
-<ul>
-<li>當然了，我相信過程也會有很多我自己需要去克服的事情，尤其開發 Windows 8 App 的中文資源實在不多，比賽當中所發表的文章，也歡迎大家不吝指教，希望大家用輕鬆愉快的角度看看我的文章就可以了，甚至我還擔心我寫到最後不知道我在寫什麼呢 XD</li>
-</ul>
+<pre><code>* 簡潔利落的排版風格
+* 內容重於形式
+* 快速且流暢轉場效果
+* 動態磚
+* 橫向移動</code></pre>
 <hr />
-<h2 id='id12'>開始之前的準備。。。</h2>
+<h2 id='windows_8_app_layout'>Windows 8 App Layout</h2>
+
+<p>對於 Layout 的排版方式，也是很講究的，請參考：<a href='http://msdn.microsoft.com/en-us/library/windows/apps/hh872191.aspx'>Laying out an app page</a></p>
+
+<p>針對上面的連結，我有稍微做了一點整理：</p>
+
+<h3 id='grid_system_'>Grid System 網格系統：</h3>
 
 <ul>
-<li>
-<p>如果你沒有 windows 8，那你可以考慮跟我一樣先裝 8.1 Preview ，可<a href='http://windows.microsoft.com/zh-tw/windows-8/preview
-'>參考此網址</a>。再來，如果對 windows 8 沒興趣，也歡迎看看就好：）</p>
-</li>
+<li>網格系統是由 <code>unit</code> 跟 <code>sub-units</code> 所組成，每一個 unit 約等於 <code>20 X 20</code> px 的正方體，每一個 unit 裡面可以包含 <code>16</code>個 <code>5 X 5</code> px 的 sub-units。</li>
+</ul>
 
-<li>
-<p>接著，如果也要一起玩，請裝 Visual Studio 2012，可<a href='http://www.microsoft.com/visualstudio/cht/downloads'>參考此網址</a>，我是安裝試用版，可以<code>90</code>天試用。</p>
-</li>
+<h3 id='page_header_'>Page Header 頁面標頭：</h3>
 
-<li>
-<p>visual studio 2012 硬體要求： <ul>
-<li>10G 以上的硬碟空間</li>
-<li>1G 以上的RAM</li>
-<li>1.6GHz 或者更快的處理器</li>
-<li>x86或x64都可以</li>
-</ul> <br /></p>
-</li>
+<ul>
+<li>標頭的 baseline 應該要距離最上方 5 個 units 的大小（或者是跟最上方距離100px）， 標頭距離左側應該要有 6 個 units 的大小 (或者是跟左方距離120px)，標頭的字體是 SegoeUI Stylistic Set 20, light weight 。</li>
+</ul>
 
-<li>
-<p><strong>對了，千萬不要偷懶只安裝</strong> Visual Studio 2012 而不打算把 win7 升級成 win8，因為一定要是 win8 的作業系統才有辦法在 Visual Studio 2012 看到 window8市集的範本選項（再往後的章節會提到）。</p>
-</li>
+<h3 id='content_region_'>Content Region 中間區域：</h3>
 
-<li>
-<p>裝 Visual Studio 要等一陣子，可以買杯茶再回家&#8230;</p>
-</li>
-
-<li>
-<p>補充：Visual Studio 有四種版本： <ul>
-<li>Ultimate （我是安裝此版本)</li>
-<li>Preminum</li>
-<li>Professional</li>
-<li>Test Professional</li>
-</ul></p>
-</li>
+<ul>
+<li>margin-top 約 7 個 units 的大小（或者說 140px）; left-margin 約 6 個 units 的大小（或者說 120px); margin-bottom 可以自由擴展，沒有限制。</li>
 </ul>
 <hr />
-<h2 id='id13'>總結一下今天要做的事：</h2>
-<img width='100%' src='../../images/windows-8-app/day1-3.png' />
-<p>如果你成功安裝完成後，開開看 Visual Studio 2012 吧！ 希望你/妳會跟我看到類似的畫面。 (之後我們會很常看到這個畫面XD)</p>
-<img width='50%' src='../../images/windows-8-app/day1-2.png' /><hr />
-<p>今日進度結束， 下一篇，可能是淺談 windows 8 的界面設計。</p>
+<h2 id='_windows_8_app_'>一些 Windows 8 App 的畫面</h2>
+
+<p>為了怕沒有 window 8 的人不知道 window8 的一些畫面，所以截了一些圖片。</p>
+
+<p>起始畫面，通常會看到畫面有很多<code>動態磚(Live Tile)</code>，win8 的四邊通常會藏有些功能，比方說右邊是<code>『系統快速鍵』</code>; 上下方是<code>『Application Bar (App Bar)』</code>(上方通常是導覽用途，下方通常是功能用途)，左邊是<code>『呼叫系統快速鍵』</code>（你開過沒有關的app會在左邊）。</p>
+<img width='100%' src='../../images/windows-8-app/day2-1.png' /><img width='100%' src='../../images/windows-8-app/day2-2.png' />
+<h3 id='appbar_application_bar'>AppBar (Application Bar)</h3>
+<img width='100%' src='../../images/windows-8-app/day2-10.png' /><img width='100%' src='../../images/windows-8-app/day2-3.png' />
+<h3 id='id14'>表單元素</h3>
+<img width='100%' src='../../images/windows-8-app/day2-4.png' />
+<h3 id='search_bar_'>Search Bar 搜尋框</h3>
+<img width='50%' src='../../images/windows-8-app/day2-5.png' />
+<h3 id='_appbar_'>有 AppBar 的例子</h3>
+<img width='100%' src='../../images/windows-8-app/day2-6.png' /><img width='100%' src='../../images/windows-8-app/day2-7.png' /><hr />
+<h3 id='windows_8_strore_'>Windows 8 Strore 看看有哪些現成的作品</h3>
+
+<p>(此圖截自：http://windows.microsoft.com/zh-tw/windows-8/apps#Cat=t1)</p>
+
+<p>可以點選一些 App 看看裡面的內容。 <img width='100%' src='../../images/windows-8-app/day2-8.png' /></p>
+<hr />
+<p>(此圖截自：http://apps.microsoft.com/windows/zh-tw/app/windows-8/d59f025f-8cf2-422e-b204-0684e9125501) 看看別人的 App 寫出來的樣子，這些都是很好的參考。 <img width='100%' src='../../images/windows-8-app/day2-9.png' /></p>
+<hr />
+<p>本來想寫一些 windows8 的操作/觸控方式，不過我沒有平板:P，此部分忍痛跳過。</p>
+
+<p>下一篇我還沒有想到要寫什麼，明天再看:P</p>
 
 <p>本篇同時轉載於 <a href='http://ithelp.ithome.com.tw/'>it邦幫忙</a>。</p>
 
-<p>如有任何問題，歡迎留言。雖然我不一定會 :P，但盡可能找到 reference 或解答。</p>
+<p>如有任何問題，歡迎留言。雖然我不一定會 :P</p>
     </div>
 
   
@@ -234,7 +217,7 @@
   
      
     	<li><a href="/categories.html#windows-8-app-ref">
-    		windows-8-app <span>1</span>
+    		windows-8-app <span>2</span>
     	</a></li>
     
   
@@ -252,7 +235,7 @@
 
   
      
-    	<li><a href="/tags.html#windows 8 App-ref">windows 8 App <span>1</span></a></li>
+    	<li><a href="/tags.html#windows 8 App-ref">windows 8 App <span>2</span></a></li>
     
   
 
@@ -266,7 +249,7 @@
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/2013/09/14/my-second-blog" title="第二站新開張">&larr; Previous</a></li>
+        <li class="prev"><a href="/windows-8-app/2013/09/16/day1-win8-app-intro" title="Day1:HTML5 X JavaScript 開發 Windows 8 Apps">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       

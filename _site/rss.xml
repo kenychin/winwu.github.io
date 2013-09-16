@@ -5,10 +5,99 @@
         <description>Win.心得小筆記 - Win Wu</description>
         <link>http://winwu.github.io</link>
         <link>http://winwu.github.io</link>
-        <lastBuildDate>2013-09-14T20:11:53+08:00</lastBuildDate>
-        <pubDate>2013-09-14T20:11:53+08:00</pubDate>
+        <lastBuildDate>2013-09-16T13:41:40+08:00</lastBuildDate>
+        <pubDate>2013-09-16T13:41:40+08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Day1:HTML5 X JavaScript 開發 Windows 8 Apps</title>
+                <description>&lt;h2 id='day1_'&gt;Day1 開場白與環境介紹&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;訂主題，不是一件簡單的事情&amp;#8230;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;大家好，我是win， &lt;img width='100%' src='../../images/windows-8-app/day1-0.png' /&gt; 目前是一位菜 Frontend，第一次參加鐵人賽，覺得有趣就也報名了，雖然平常就有在寫文章的習慣，不過還沒有試過連續30天發文。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id='id11'&gt;關於主題&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;這次的主題是『用 HTML5 和 JavaScript 學習開發 Windows Apps』，嚴格來說是 Windows 8 App 啦，好多人都以為我要寫 Windows Phone，可是我沒 Phone 可玩&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img width='100%' src='../../images/windows-8-app/day1-1.png' /&gt;
+&lt;p&gt;（windows 8 開始畫面）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不知道是不是有人開始用 windows 8 了？（以下偶爾會直接簡稱 win8），大部份的朋友，不是不習慣去適應這種全新的界面，不然就是還沒更新到 Windows 8 ，我反而是因為被 Window App 的設計給吸引，而升級自己的電腦從 windows 7 到 windows 8，一直以來，一直沒寫過 App，也沒有碰過 Visual Studio 這種工具，所以學 Windows 8 App 對我來說，有各式各樣的嘗試與挑戰，目前我也不是靠寫 Win8 App 維生&amp;#8230;我是帶著好奇心去學習怎麼開發的。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;希望藉由這次鐵人賽，邊玩邊學邊分享，我唯一的夢想，就是希望能真的撐到 30 天吶！（每次想到30這個數字都讓我很有壓力XD）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;放心，我不會教大家怎麼用 win8，因為我也不熟，我只會用搜尋，然後開IDE&amp;#8230;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;當然了，我相信過程也會有很多我自己需要去克服的事情，尤其開發 Windows 8 App 的中文資源實在不多，比賽當中所發表的文章，也歡迎大家不吝指教，希望大家用輕鬆愉快的角度看看我的文章就可以了，甚至我還擔心我寫到最後不知道我在寫什麼呢 XD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id='id12'&gt;開始之前的準備。。。&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;如果你沒有 windows 8，那你可以考慮跟我一樣先裝 8.1 Preview ，可&lt;a href='http://windows.microsoft.com/zh-tw/windows-8/preview
+'&gt;參考此網址&lt;/a&gt;。再來，如果對 windows 8 沒興趣，也歡迎看看就好：）&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;接著，如果也要一起玩，請裝 Visual Studio 2012，可&lt;a href='http://www.microsoft.com/visualstudio/cht/downloads'&gt;參考此網址&lt;/a&gt;，我是安裝試用版，可以&lt;code&gt;90&lt;/code&gt;天試用。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;visual studio 2012 硬體要求： &lt;ul&gt;
+&lt;li&gt;10G 以上的硬碟空間&lt;/li&gt;
+&lt;li&gt;1G 以上的RAM&lt;/li&gt;
+&lt;li&gt;1.6GHz 或者更快的處理器&lt;/li&gt;
+&lt;li&gt;x86或x64都可以&lt;/li&gt;
+&lt;/ul&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;對了，千萬不要偷懶只安裝&lt;/strong&gt; Visual Studio 2012 而不打算把 win7 升級成 win8，因為一定要是 win8 的作業系統才有辦法在 Visual Studio 2012 看到 window8市集的範本選項（再往後的章節會提到）。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;裝 Visual Studio 要等一陣子，可以買杯茶再回家&amp;#8230;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;補充：Visual Studio 有四種版本： &lt;ul&gt;
+&lt;li&gt;Ultimate （我是安裝此版本)&lt;/li&gt;
+&lt;li&gt;Preminum&lt;/li&gt;
+&lt;li&gt;Professional&lt;/li&gt;
+&lt;li&gt;Test Professional&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id='id13'&gt;總結一下今天要做的事：&lt;/h2&gt;
+&lt;img width='100%' src='../../images/windows-8-app/day1-3.png' /&gt;
+&lt;p&gt;如果你成功安裝完成後，開開看 Visual Studio 2012 吧！ 希望你/妳會跟我看到類似的畫面。 (之後我們會很常看到這個畫面XD)&lt;/p&gt;
+&lt;img width='50%' src='../../images/windows-8-app/day1-2.png' /&gt;&lt;hr /&gt;
+&lt;p&gt;今日進度結束， 下一篇，可能是淺談 windows 8 的界面設計。&lt;/p&gt;
+
+&lt;p&gt;本篇同時轉載於 &lt;a href='http://ithelp.ithome.com.tw/'&gt;it邦幫忙&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;如有任何問題，歡迎留言。雖然我不一定會 :P，但盡可能找到 reference 或解答。&lt;/p&gt;</description>
+                <link>http://winwu.github.io/windows-8-app/2013/09/16/day1-win8-app-intro</link>
+                <guid>http://winwu.github.io/windows-8-app/2013/09/16/day1-win8-app-intro</guid>
+                <pubDate>2013-09-16T19:00:00+08:00</pubDate>
+        </item>
 
         <item>
                 <title>第二站新開張</title>
@@ -66,11 +155,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' title='' width='100%' alt='altTitle' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' title='' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' title='' width='100%' alt='altTitle' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img alt='altTitle' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' title='' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
