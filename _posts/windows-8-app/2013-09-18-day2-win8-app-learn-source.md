@@ -2,7 +2,6 @@
 layout: post
 category : Windows-8-app
 title : Day3 學習 Windows 8 App 的資源列表
-date: 2013-09-18 00:02:00
 tagline: "HTML5 X JavaScript 開發 Windows 8 Apps"
 tags : [windows 8 App]
 ---
