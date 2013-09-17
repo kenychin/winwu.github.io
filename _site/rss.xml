@@ -5,8 +5,8 @@
         <description>Win.心得小筆記 - Win Wu</description>
         <link>http://winwu.github.io</link>
         <link>http://winwu.github.io</link>
-        <lastBuildDate>2013-09-18T00:09:17+08:00</lastBuildDate>
-        <pubDate>2013-09-18T00:09:17+08:00</pubDate>
+        <lastBuildDate>2013-09-18T00:28:36+08:00</lastBuildDate>
+        <pubDate>2013-09-18T00:28:36+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -136,7 +136,7 @@
 &lt;h3 id='id14'&gt;Ｃ模型配置示意圖&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170026295237313533897_resize.png' width='100%' /&gt;&lt;/li&gt;
+&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170026295237313533897_resize.png' /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id='windows_8_app_layout'&gt;Windows 8 App Layout&lt;/h2&gt;
@@ -200,21 +200,21 @@
 &lt;p&gt;為了怕沒有 window 8 的人不知道 window8 的一些畫面，所以截了一些圖片。&lt;/p&gt;
 
 &lt;p&gt;起始畫面，通常會看到畫面有很多&lt;code&gt;動態磚(Live Tile)&lt;/code&gt;，win8 的四邊通常會藏有些功能，比方說右邊是&lt;code&gt;『系統快速鍵』&lt;/code&gt;; 上下方是&lt;code&gt;『Application Bar (App Bar)』&lt;/code&gt;(上方通常是導覽用途，下方通常是功能用途)，左邊是&lt;code&gt;『呼叫系統快速鍵』&lt;/code&gt;（你開過沒有關的app會在左邊）。&lt;/p&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031095237324dd239e_resize.png' width='100%' /&gt;&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003117523732557dddf_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031095237324dd239e_resize.png' /&gt;&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003117523732557dddf_resize.png' /&gt;
 &lt;h3 id='appbar_application_bar'&gt;AppBar (Application Bar)&lt;/h3&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/2013091700315152373277e93bf_resize.png' width='100%' /&gt;&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031585237327ee82a3_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/2013091700315152373277e93bf_resize.png' /&gt;&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031585237327ee82a3_resize.png' /&gt;
 &lt;h3 id='id16'&gt;表單元素&lt;/h3&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003303523732bf09f63_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003303523732bf09f63_resize.png' /&gt;
 &lt;h3 id='search_bar_'&gt;Search Bar 搜尋框&lt;/h3&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003313523732c910935_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003313523732c910935_resize.png' /&gt;
 &lt;h3 id='_appbar_'&gt;有 AppBar 的例子&lt;/h3&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003323523732d39ac7d_resize.png' width='100%' /&gt;&lt;hr /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003323523732d39ac7d_resize.png' /&gt;&lt;hr /&gt;
 &lt;h3 id='windows_8_strore_'&gt;Windows 8 Strore 看看有哪些現成的作品&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;(此圖截自：http://windows.microsoft.com/zh-tw/windows-8/apps#Cat=t1)&lt;/li&gt;
 
-&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003403523732fb568b9_resize.png' width='100%' /&gt;&lt;/li&gt;
+&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003403523732fb568b9_resize.png' /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;本來想寫一些 windows8 的操作/觸控方式，不過我沒有平板:P，此部分忍痛跳過。&lt;/p&gt;
@@ -250,7 +250,7 @@
 &lt;ul&gt;
 &lt;li&gt;這次的主題是『用 HTML5 和 JavaScript 學習開發 Windows Apps』，嚴格來說是 Windows 8 App 啦，好多人都以為我要寫 Windows Phone，可是我沒 Phone 可玩&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png' /&gt;
 &lt;p&gt;（windows 8 開始畫面）&lt;/p&gt;
 
 &lt;ul&gt;
@@ -311,9 +311,9 @@
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id='id13'&gt;總結一下今天要做的事：&lt;/h2&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png' /&gt;
 &lt;p&gt;如果你成功安裝完成後，開開看 Visual Studio 2012 吧！ 希望你/妳會跟我看到類似的畫面。 (之後我們會很常看到這個畫面XD)&lt;/p&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png' width='50%' /&gt;&lt;hr /&gt;
+&lt;img width='50%' src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png' /&gt;&lt;hr /&gt;
 &lt;p&gt;今日進度結束， 下一篇，可能是淺談 windows 8 的界面設計。&lt;/p&gt;
 
 &lt;p&gt;本篇同時轉載於 &lt;a href='http://ithelp.ithome.com.tw/question/10126693'&gt;it邦幫忙&lt;/a&gt;。&lt;/p&gt;
@@ -380,11 +380,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' title='' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img width='100%' alt='altTitle' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' title='' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img width='100%' alt='altTitle' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
