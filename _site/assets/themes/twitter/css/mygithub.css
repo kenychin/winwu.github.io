@@ -1,6 +1,25 @@
 /* This is only for winwu.github.io*/
+#navbar_pager{
+    width: 245px;
+    margin-left: 402px;
+    margin-top: 5px;
+    position: fixed;
+    z-index: 2;
+    display: none;
+}
+#navbar_pager .next.disabled a,
+#navbar_pager .prev.disabled a{
+    background:#fff;
+    opacity: 0.8;
+}
+.navbar{
+    width:100%;
+    z-index: 1;
+    margin-bottom: 0
+}
 .navbar-inner{
     background: rgb(24, 33, 61);
+    border-radius: 0;
 }
 .navbar .brand{
     color:#fff;

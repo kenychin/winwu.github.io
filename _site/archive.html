@@ -35,6 +35,17 @@
   </head>
 
   <body>
+    <div id="navbar_pager" class="pagination">
+      <ul>
+      
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
@@ -152,6 +163,21 @@
       <h2>2013</h2>
       <h3>September</h3>
       <ul>
+    
+  
+    <li><span>September 19, 2013</span> &raquo; <a href="/windows-8-app/2013/09/19/day4-win8-app-study">Day4 Programming Windows 8 Apps with HTML CSS and JavaScript ~ ch01讀書筆記</a></li>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
     
   
     <li><span>September 18, 2013</span> &raquo; <a href="/windows-8-app/2013/09/18/day2-win8-app-learn-source">Day3 學習 Windows 8 App 的資源列表</a></li>
@@ -306,6 +332,31 @@
       console.log('show');
     });*/
     $('#pjax-container').hide().fadeIn(1000);
+
+$(document).ready(function(){
+  var $navbar = $('.navbar');
+  var $navbar_pager = $('#navbar_pager');
+  var $w=$(window);       
+  $w.scroll(function(event){
+      if( $w.scrollTop()>42 ){
+          //console.log('該fix了');
+          $navbar_pager.css('display','block');
+          $navbar.css({
+              'position':'fixed',
+              'opacity':'0.8',
+          });
+      }else{
+          //console.log('不用fix');
+          $navbar_pager.css('display','none');
+          $navbar.css({
+              'position':'static',
+              'opacity':'1',
+          });
+      }
+  });
+
+});
+
     </script>
   </body>
 </html>

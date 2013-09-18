@@ -34,6 +34,21 @@
   </head>
 
   <body>
+    <div id="navbar_pager" class="pagination">
+      <ul>
+      {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      {% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+      {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>Next &rarr;</a>
+      {% endif %}
+      </ul>
+    </div>
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
@@ -95,6 +110,31 @@
       console.log('show');
     });*/
     $('#pjax-container').hide().fadeIn(1000);
+
+$(document).ready(function(){
+  var $navbar = $('.navbar');
+  var $navbar_pager = $('#navbar_pager');
+  var $w=$(window);       
+  $w.scroll(function(event){
+      if( $w.scrollTop()>42 ){
+          //console.log('該fix了');
+          $navbar_pager.css('display','block');
+          $navbar.css({
+              'position':'fixed',
+              'opacity':'0.8',
+          });
+      }else{
+          //console.log('不用fix');
+          $navbar_pager.css('display','none');
+          $navbar.css({
+              'position':'static',
+              'opacity':'1',
+          });
+      }
+  });
+
+});
+
     </script>
   </body>
 </html>

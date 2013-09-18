@@ -35,6 +35,17 @@
   </head>
 
   <body>
+    <div id="navbar_pager" class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2013/09/14/my-second-blog" title="第二站新開張">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/windows-8-app/2013/09/17/day2-win8-app-ui" title="Day2 windows 8 的界面設計(Windows UI)">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
@@ -154,7 +165,7 @@
 <ul>
 <li>這次的主題是『用 HTML5 和 JavaScript 學習開發 Windows Apps』，嚴格來說是 Windows 8 App 啦，好多人都以為我要寫 Windows Phone，可是我沒 Phone 可玩&#8230;</li>
 </ul>
-<img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png' />
+<img src='http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png' width='100%' />
 <p>（windows 8 開始畫面）</p>
 
 <ul>
@@ -215,9 +226,9 @@
 </ul>
 <hr />
 <h2 id='id13'>總結一下今天要做的事：</h2>
-<img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png' />
+<img src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png' width='100%' />
 <p>如果你成功安裝完成後，開開看 Visual Studio 2012 吧！ 希望你/妳會跟我看到類似的畫面。 (之後我們會很常看到這個畫面XD)</p>
-<img width='50%' src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png' /><hr />
+<img src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png' width='50%' /><hr />
 <p>今日進度結束， 下一篇，可能是淺談 windows 8 的界面設計。</p>
 
 <p>本篇同時轉載於 <a href='http://ithelp.ithome.com.tw/question/10126693'>it邦幫忙</a>。</p>
@@ -235,7 +246,7 @@
   
      
     	<li><a href="/categories.html#windows-8-app-ref">
-    		windows-8-app <span>4</span>
+    		windows-8-app <span>5</span>
     	</a></li>
     
   
@@ -253,7 +264,7 @@
 
   
      
-    	<li><a href="/tags.html#windows 8 App-ref">windows 8 App <span>4</span></a></li>
+    	<li><a href="/tags.html#windows 8 App-ref">windows 8 App <span>5</span></a></li>
     
   
 
@@ -322,6 +333,31 @@
       console.log('show');
     });*/
     $('#pjax-container').hide().fadeIn(1000);
+
+$(document).ready(function(){
+  var $navbar = $('.navbar');
+  var $navbar_pager = $('#navbar_pager');
+  var $w=$(window);       
+  $w.scroll(function(event){
+      if( $w.scrollTop()>42 ){
+          //console.log('該fix了');
+          $navbar_pager.css('display','block');
+          $navbar.css({
+              'position':'fixed',
+              'opacity':'0.8',
+          });
+      }else{
+          //console.log('不用fix');
+          $navbar_pager.css('display','none');
+          $navbar.css({
+              'position':'static',
+              'opacity':'1',
+          });
+      }
+  });
+
+});
+
     </script>
   </body>
 </html>

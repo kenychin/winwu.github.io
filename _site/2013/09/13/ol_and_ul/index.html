@@ -35,6 +35,17 @@
   </head>
 
   <body>
+    <div id="navbar_pager" class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2013/09/11/my-vim-note" title="我的 Vim 指令筆記">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2013/09/13/yui-purecss-practice" title="Pure CSS 實作練習(一)：Homepage">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
@@ -228,6 +239,31 @@
       console.log('show');
     });*/
     $('#pjax-container').hide().fadeIn(1000);
+
+$(document).ready(function(){
+  var $navbar = $('.navbar');
+  var $navbar_pager = $('#navbar_pager');
+  var $w=$(window);       
+  $w.scroll(function(event){
+      if( $w.scrollTop()>42 ){
+          //console.log('該fix了');
+          $navbar_pager.css('display','block');
+          $navbar.css({
+              'position':'fixed',
+              'opacity':'0.8',
+          });
+      }else{
+          //console.log('不用fix');
+          $navbar_pager.css('display','none');
+          $navbar.css({
+              'position':'static',
+              'opacity':'1',
+          });
+      }
+  });
+
+});
+
     </script>
   </body>
 </html>

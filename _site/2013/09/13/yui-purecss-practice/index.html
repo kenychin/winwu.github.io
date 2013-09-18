@@ -35,6 +35,17 @@
   </head>
 
   <body>
+    <div id="navbar_pager" class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2013/09/13/ol_and_ul" title="ol, ul 的理解與誤用">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2013/09/14/my-second-blog" title="第二站新開張">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
@@ -171,11 +182,11 @@
 
 <ul>
 <li>
-<p>Demo畫面1：（homepage/index.html）: <a href='http://winwu.github.io/pureCSS-practice/homepage/'><img width='100%' alt='altTitle' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' /></a></p>
+<p>Demo畫面1：（homepage/index.html）: <a href='http://winwu.github.io/pureCSS-practice/homepage/'><img title='' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' /></a></p>
 </li>
 
 <li>
-<p>Demo畫面2： <img width='100%' alt='altTitle' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' /></p>
+<p>Demo畫面2： <img title='' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' /></p>
 </li>
 </ul>
 
@@ -290,6 +301,31 @@
       console.log('show');
     });*/
     $('#pjax-container').hide().fadeIn(1000);
+
+$(document).ready(function(){
+  var $navbar = $('.navbar');
+  var $navbar_pager = $('#navbar_pager');
+  var $w=$(window);       
+  $w.scroll(function(event){
+      if( $w.scrollTop()>42 ){
+          //console.log('該fix了');
+          $navbar_pager.css('display','block');
+          $navbar.css({
+              'position':'fixed',
+              'opacity':'0.8',
+          });
+      }else{
+          //console.log('不用fix');
+          $navbar_pager.css('display','none');
+          $navbar.css({
+              'position':'static',
+              'opacity':'1',
+          });
+      }
+  });
+
+});
+
     </script>
   </body>
 </html>

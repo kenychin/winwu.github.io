@@ -4,13 +4,105 @@
  <title>Win.心得小筆記</title>
  <link href="http://winwu.github.io/" rel="self"/>
  <link href="http://winwu.github.io"/>
- <updated>2013-09-18T08:56:45+08:00</updated>
+ <updated>2013-09-19T00:06:44+08:00</updated>
  <id>http://winwu.github.io</id>
  <author>
    <name>Win Wu</name>
    <email>yiyingwu.1990@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Day4 Programming Windows 8 Apps with HTML CSS and JavaScript ~ ch01讀書筆記</title>
+   <link href="http://winwu.github.io/windows-8-app/2013/09/19/day4-win8-app-study"/>
+   <updated>2013-09-19T00:00:00+08:00</updated>
+   <id>http://winwu.github.io/windows-8-app/2013/09/19/day4-win8-app-study</id>
+   <content type="html">&lt;h3 id='__programming_windows_8_apps_with_html_css_and_javascript'&gt;書目 :&lt;br /&gt; Programming Windows 8 Apps with HTML CSS and JavaScript&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;h3 id='_chapter_1'&gt;本次章節： Chapter 1&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;書本連結 &lt;a href='http://blogs.msdn.com/b/microsoft_press/archive/2012/10/29/free-ebook-programming-windows-8-apps-with-html-css-and-javascript.aspx'&gt;Free ebook: Programming Windows 8 Apps with HTML, CSS, and JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id='id20'&gt;以下僅是個人對書目內容的理解，如果錯誤煩請糾正，謝謝。&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;windows 8 的團隊做了一個系統的API，可以讓很多不同的程式語言去使用，&lt;code&gt;包含JavaScript&lt;/code&gt;，簡單來說可以用各種不同語言，開發最後長得差不多的東西，看你會哪種。那個這個 API ，就是鼎鼎有名的&lt;code&gt;Windows Runtime API&lt;/code&gt;，如果你看很多文件，有的人會簡稱 &lt;code&gt;WinRT&lt;/code&gt;，也就是指&lt;code&gt;Windows Runtime API&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;WinRT 這個 API，做的事情包含了這個 object 怎麼被創造，事件, error, expections 的處理, 處理非同步, 如何保持畫面的順暢, 滑動的效果, 方法,屬性等等。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;你所開發的 Windows 8 App，上架的地點絕對不是菜市場，更不是你家，唯一的上架地點就是 Windows App Store (恩…要註冊哦&amp;#8230;)，Visual Studio 有個很方便的功能可以讓你直接打包 (package) 你所開發的App，就是 &lt;code&gt;Store/Upload App Package&lt;/code&gt; 指令。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;當你使用 visual studio 開發 win8 app 時，每個專案應該可以說成是一個 package，這個 package 本身是一個附檔名是 &lt;code&gt;.appx&lt;/code&gt; 的檔案，這個檔案包含你的程式碼，你的其他資料的來源， librares，以及 &lt;code&gt;manifest&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;manifest&lt;/code&gt; 是一個神秘檔案，ＸＤ，依照我的理解，它會自己產生，不太可能是手動建的，它記載著你當下那個 app 的基本資料，像是 App 的名字，logo是哪幾張啊～，之類的。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;中間好幾段都在講 windows store 市集，這個比較沒什麼好寫的，先跳過。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id='_windows_library_for_javascript'&gt;什麼是 Windows Library for JavaScript?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;也被稱為&lt;code&gt;WinJS&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;html, css, JavaScript 其實是在 App 執行的時候，被載入（html）, 被編譯 (javascript), 被 render (css) 出來的，最後經過 WinJS ，很多 App 預設的行為，樣式也會一起幫你做出來。也就是說 WinJS 提供很多現成的效果可以直接使用，你不需要為了做出符合 windows 8 app 的 User Experience (比方說一些動畫的效果, 事件跟行為) 的效果而自己重造輪子。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id='_library'&gt;關於第三方的 Library&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;這個部分是從 33 頁底下開始。&lt;/li&gt;
+
+&lt;li&gt;Windows App 其實是可以讓你帶入一些第三方的 Library， 像是 jQuery, Modernizer, prototype.js 等等，但是有些功能是會被擋的，要記住的是，只用這些 library，必須把這些第三方的 library 也放在 package 裡面。（個人註解：我記得是不能像 web 一樣寫 CDN，比方說你要用jquery，那麼整個 jQuery 都要下載下來放到你的 package，可能是js資料夾或是哪裡之類的）。&lt;/li&gt;
+
+&lt;li&gt;雖然是用 web 的語言(html/css/JavaScript)寫的 app，可是跑在 WinRT 跟跑在 browser 是兩件事。&lt;/li&gt;
+
+&lt;li&gt;有些 JavaScript 的行為跟事件在 Win8 App 是會被擋住的，像是 &lt;code&gt;window.alert&lt;/code&gt;, &lt;code&gt;windows.open&lt;/code&gt;, &lt;code&gt;windows.prompt&lt;/code&gt;等等，類似的功能你可以使用其他方式去取代，像 Windows.UI.Popups.MessageDialog 也是類似 windows.prompt 的功能。&lt;/li&gt;
+
+&lt;li&gt;你不能 load 外面的 script，也就是不能用 script src=&amp;#8221;https://source…&amp;#8221; 來載入其他檔案，很有可能會被濾掉。&lt;/li&gt;
+
+&lt;li&gt;windows 8 App 雖然也可以用 javascript 控制很多行為，不過有些 API 並不支援，請參考 &lt;a href='http://msdn.microsoft.com/library/windows/apps/hh700404.aspx'&gt;HTML 與 DOM API 變更清單&lt;/a&gt;。&lt;/li&gt;
+
+&lt;li&gt;只有用 JavaScript 開發的 Windows 8 App 可以直接 access WinRT 這個 API，如果是用 C#, Visual Basic, C++ 還要 access Win32 跟 .NET API (這個 Win32 跟 .NET API 是什麼我就不懂了，有請大大們指示XDD)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id='singlepage__multipage_navigation'&gt;Single-Page 對上 Multipage Navigation&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;web 的做法，通常是有好幾個頁面，透過 &lt;code&gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;go where&amp;lt;/a&amp;gt;&lt;/code&gt; 超連結轉到別的頁面，或是使用 location.href 做頁面的轉換，那…你覺得 app 怎麼轉頁呢？&lt;/li&gt;
+
+&lt;li&gt;在 App 你要用這種方式轉頁也是沒有問題，只是有些缺點，第一件事情是轉頁意味著要再 loading Script，還要重新 Parse HTML 檔案， render 畫面，如果要共用一些 global 變數是有點麻煩，而且還會有效能的問題。而且在 app 上轉頁其實是有點突兀的事情，因為這樣很難做到提供給 user 順暢的轉場效果。&lt;/li&gt;
+
+&lt;li&gt;所以，因為以上的種種因素，為了解決這些困擾，通常 app 都會是以 single HTML page 的方式，可能是有一塊主要的 Div，去替換 content，有點像是 ajax。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;所以，傳統的桌面應用程式，跟 App 差在哪裡？ 答案是，後者的本質是有狀態的 (inherently stateful.&amp;#8212;&amp;gt; 是這樣翻嗎？)。&lt;/li&gt;
+
+&lt;li&gt;後面有一段都在講 App State 跟 Roaming，不是很瞭解是在幹嘛的，暫時不寫。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id='_happy_coding'&gt;祝大家 Happy Coding!&lt;/h3&gt;
+
+&lt;h3 id='id21'&gt;中秋佳節愉快！&lt;/h3&gt;
+
+&lt;p&gt;今日進度結束，請等待下一篇。&lt;/p&gt;
+
+&lt;p&gt;如有任何問題，歡迎留言。雖然我不一定會 :P，但盡可能找到 reference 或解答。&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Day3 學習 Windows 8 App 的資源列表</title>
@@ -197,7 +289,7 @@
 &lt;h3 id='id14'&gt;Ｃ模型配置示意圖&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170026295237313533897_resize.png' /&gt;&lt;/li&gt;
+&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170026295237313533897_resize.png' width='100%' /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id='windows_8_app_layout'&gt;Windows 8 App Layout&lt;/h2&gt;
@@ -261,21 +353,21 @@
 &lt;p&gt;為了怕沒有 window 8 的人不知道 window8 的一些畫面，所以截了一些圖片。&lt;/p&gt;
 
 &lt;p&gt;起始畫面，通常會看到畫面有很多&lt;code&gt;動態磚(Live Tile)&lt;/code&gt;，win8 的四邊通常會藏有些功能，比方說右邊是&lt;code&gt;『系統快速鍵』&lt;/code&gt;; 上下方是&lt;code&gt;『Application Bar (App Bar)』&lt;/code&gt;(上方通常是導覽用途，下方通常是功能用途)，左邊是&lt;code&gt;『呼叫系統快速鍵』&lt;/code&gt;（你開過沒有關的app會在左邊）。&lt;/p&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031095237324dd239e_resize.png' /&gt;&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003117523732557dddf_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031095237324dd239e_resize.png' width='100%' /&gt;&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003117523732557dddf_resize.png' width='100%' /&gt;
 &lt;h3 id='appbar_application_bar'&gt;AppBar (Application Bar)&lt;/h3&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/2013091700315152373277e93bf_resize.png' /&gt;&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031585237327ee82a3_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/2013091700315152373277e93bf_resize.png' width='100%' /&gt;&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031585237327ee82a3_resize.png' width='100%' /&gt;
 &lt;h3 id='id16'&gt;表單元素&lt;/h3&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003303523732bf09f63_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003303523732bf09f63_resize.png' width='100%' /&gt;
 &lt;h3 id='search_bar_'&gt;Search Bar 搜尋框&lt;/h3&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003313523732c910935_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003313523732c910935_resize.png' width='100%' /&gt;
 &lt;h3 id='_appbar_'&gt;有 AppBar 的例子&lt;/h3&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003323523732d39ac7d_resize.png' /&gt;&lt;hr /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003323523732d39ac7d_resize.png' width='100%' /&gt;&lt;hr /&gt;
 &lt;h3 id='windows_8_strore_'&gt;Windows 8 Strore 看看有哪些現成的作品&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;(此圖截自：http://windows.microsoft.com/zh-tw/windows-8/apps#Cat=t1)&lt;/li&gt;
 
-&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003403523732fb568b9_resize.png' /&gt;&lt;/li&gt;
+&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003403523732fb568b9_resize.png' width='100%' /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;本來想寫一些 windows8 的操作/觸控方式，不過我沒有平板:P，此部分忍痛跳過。&lt;/p&gt;
@@ -311,7 +403,7 @@
 &lt;ul&gt;
 &lt;li&gt;這次的主題是『用 HTML5 和 JavaScript 學習開發 Windows Apps』，嚴格來說是 Windows 8 App 啦，好多人都以為我要寫 Windows Phone，可是我沒 Phone 可玩&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png' width='100%' /&gt;
 &lt;p&gt;（windows 8 開始畫面）&lt;/p&gt;
 
 &lt;ul&gt;
@@ -372,9 +464,9 @@
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id='id13'&gt;總結一下今天要做的事：&lt;/h2&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png' width='100%' /&gt;
 &lt;p&gt;如果你成功安裝完成後，開開看 Visual Studio 2012 吧！ 希望你/妳會跟我看到類似的畫面。 (之後我們會很常看到這個畫面XD)&lt;/p&gt;
-&lt;img width='50%' src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png' /&gt;&lt;hr /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png' width='50%' /&gt;&lt;hr /&gt;
 &lt;p&gt;今日進度結束， 下一篇，可能是淺談 windows 8 的界面設計。&lt;/p&gt;
 
 &lt;p&gt;本篇同時轉載於 &lt;a href='http://ithelp.ithome.com.tw/question/10126693'&gt;it邦幫忙&lt;/a&gt;。&lt;/p&gt;
@@ -441,11 +533,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img width='100%' alt='altTitle' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img title='' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img width='100%' alt='altTitle' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img title='' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
