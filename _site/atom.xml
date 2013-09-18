@@ -4,7 +4,7 @@
  <title>Win.心得小筆記</title>
  <link href="http://winwu.github.io/" rel="self"/>
  <link href="http://winwu.github.io"/>
- <updated>2013-09-19T00:06:44+08:00</updated>
+ <updated>2013-09-19T00:09:58+08:00</updated>
  <id>http://winwu.github.io</id>
  <author>
    <name>Win Wu</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Day4 Programming Windows 8 Apps with HTML CSS and JavaScript ~ ch01讀書筆記</title>
    <link href="http://winwu.github.io/windows-8-app/2013/09/19/day4-win8-app-study"/>
-   <updated>2013-09-19T00:00:00+08:00</updated>
+   <updated>2013-09-19T12:09:00+08:00</updated>
    <id>http://winwu.github.io/windows-8-app/2013/09/19/day4-win8-app-study</id>
    <content type="html">&lt;h3 id='__programming_windows_8_apps_with_html_css_and_javascript'&gt;書目 :&lt;br /&gt; Programming Windows 8 Apps with HTML CSS and JavaScript&lt;/h3&gt;
 &lt;hr /&gt;
@@ -533,11 +533,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img title='' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' title='' alt='altTitle' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img title='' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' title='' alt='altTitle' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
