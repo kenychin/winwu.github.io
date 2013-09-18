@@ -2,7 +2,7 @@
 layout: post
 category : Windows-8-app
 title : Day4 Programming Windows 8 Apps with HTML CSS and JavaScript ~ ch01讀書筆記
-date: 2013-09-19 12:09:00
+
 tagline: "HTML5 X JavaScript 開發 Windows 8 Apps"
 tags : [windows 8 App]
 ---
