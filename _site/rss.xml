@@ -5,10 +5,114 @@
         <description>Win.心得小筆記 - Win Wu</description>
         <link>http://winwu.github.io</link>
         <link>http://winwu.github.io</link>
-        <lastBuildDate>2013-09-19T00:12:07+08:00</lastBuildDate>
-        <pubDate>2013-09-19T00:12:07+08:00</pubDate>
+        <lastBuildDate>2013-09-19T23:43:09+08:00</lastBuildDate>
+        <pubDate>2013-09-19T23:43:09+08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Day5  Windows API  For Windows App（一） WinRT</title>
+                <description>&lt;ul&gt;
+&lt;li&gt;這個啊，其實還重要的，嚴格來講其實是因為後面後開始介紹怎麼使用 windows UI 的組件，主要是為了這個目的，用法你會很常看到我們使用 『 &lt;code&gt;WinJS.UI.XXXXX&lt;/code&gt; 』做些事情。&lt;/li&gt;
+
+&lt;li&gt;比方說你要做可以做評分的星星，那麼你就會用到 &lt;code&gt;WinJS.UI.Rating&lt;/code&gt;;&lt;/li&gt;
+
+&lt;li&gt;比方說你要做搜尋框，那麼就會用到 &lt;code&gt;WinJS.UI.SearchBox&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id='windows__api'&gt;Windows 主要會提供兩種 API&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;WinRT : Windows Runtime&lt;/li&gt;
+
+&lt;li&gt;WinJS : Windows Library for JavaScript&lt;/li&gt;
+
+&lt;li&gt;今天介紹 WinRT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id='windows_runtime'&gt;Windows Runtime：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;有的人會直接稱他為 『WinRT』或 windows 執行庫。 另外也有人認為它是一個 Framework 而不覺得他是 API，這個&amp;#8230;跟一些.NET的歷史有關，因為我不了解這段過去，有興趣的朋友可以自行搜尋多了解。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Windows 8 App 雖然能夠使用各種不同語言實作，但不論是哪種語言，實作出來的結果都必須透過(訪問, Access)一個叫做 Windows Runtime 的 API（感覺像是很多 API 的集合），講白一點就是它是建構 windows App 的一個 API，我自己是覺得他感覺是比較偏底層的，是用來協助跟作業系統（OS，在這裡所指的就是 Windows 8 ）溝通的作用。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;另外，WinRT 裡面的 API 定義是遵循 ECMA 335 的標準。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='winrt__api_'&gt;WinRT 有哪些 API 呢？&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(WinRT 的 API 其 Namespace 都是以 Windows 為首，還蠻好記的。)好多，但很難懂&amp;#8230;，可能是我還用不到吧，以下列到的都是：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Windows.ApplicationModel (讓 app 取得 package 的資訊。)&lt;/li&gt;
+
+&lt;li&gt;Windows.Foundation (啓用一些功能，像是非同步操作的管理， 取得已儲存的屬性，圖片或是 URI。)&lt;/li&gt;
+
+&lt;li&gt;Windows.Management&lt;/li&gt;
+
+&lt;li&gt;Windows.Data&lt;/li&gt;
+
+&lt;li&gt;Windows.Devices (跟一些裝置有關，像相機, 羅盤, GPS等等。)&lt;/li&gt;
+
+&lt;li&gt;Windows.System&lt;/li&gt;
+
+&lt;li&gt;Windows.UI (WinRT 最大的 namespace，可以在這裡找到很多啓動觸控的UI元件)&lt;/li&gt;
+
+&lt;li&gt;Windows.Globalization&lt;/li&gt;
+
+&lt;li&gt;Windows.Graphics&lt;/li&gt;
+
+&lt;li&gt;Windows.Media&lt;/li&gt;
+
+&lt;li&gt;Windows.Networking&lt;/li&gt;
+
+&lt;li&gt;Windows.Security&lt;/li&gt;
+
+&lt;li&gt;Windows.Storage&lt;/li&gt;
+
+&lt;li&gt;Windows.Web&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;WinRT 我覺得太抽象了，感覺我應該要到一定的 level 才能理解啊～ 下一篇會提到另外一個 API，&lt;code&gt;Windows Library for JavaScript(WinJS)&lt;/code&gt;，這個稍微好理解一點。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id='id22'&gt;參考資源：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://msdn.microsoft.com/en-US/library/windows/apps/br211377'&gt;Windows API reference for Windows Store apps&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://www.cnblogs.com/shanyou/archive/2011/09/17/WinRT.html'&gt;Windows Runtime(WinRT) 揭秘&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://en.wikipedia.org/wiki/Windows_Runtime'&gt;wikipedia-Windows Runtime&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://dev.bennage.com/blog/2012/08/01/a-brief-introduction-to-winjs/'&gt;A Brief Introduction to WinJS&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx'&gt;Windows API reference for Windows Store apps&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://www.dummies.com/how-to/content/windows-8-application-development-with-html5-for-d.html'&gt;Windows 8 Application Development with HTML5 For Dummies&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://wiki.commonjs.org/wiki/Promises/A'&gt;Promises/A&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://www.dotblogs.com.tw/regionbbs/archive/2011/09/19/javascript.and.winjs.in.windows.8.aspx'&gt;問八系列 與 Windows Runtime Library 是麻吉的好朋友：JavaScript + WinJS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;* 今日進度結束。 * 如有任何問題，歡迎留言。雖然我不一定會 :P，但盡可能找到 reference 或解答。&lt;/p&gt;</description>
+                <link>http://winwu.github.io/windows-8-app/2013/09/20/day4-win8-app-winrt</link>
+                <guid>http://winwu.github.io/windows-8-app/2013/09/20/day4-win8-app-winrt</guid>
+                <pubDate>2013-09-20T12:00:00+08:00</pubDate>
+        </item>
 
         <item>
                 <title>Day4 Programming Windows 8 Apps with HTML CSS and JavaScript ~ ch01讀書筆記</title>
@@ -284,7 +388,7 @@
 &lt;h3 id='id14'&gt;Ｃ模型配置示意圖&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170026295237313533897_resize.png' /&gt;&lt;/li&gt;
+&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170026295237313533897_resize.png' width='100%' /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id='windows_8_app_layout'&gt;Windows 8 App Layout&lt;/h2&gt;
@@ -348,21 +452,21 @@
 &lt;p&gt;為了怕沒有 window 8 的人不知道 window8 的一些畫面，所以截了一些圖片。&lt;/p&gt;
 
 &lt;p&gt;起始畫面，通常會看到畫面有很多&lt;code&gt;動態磚(Live Tile)&lt;/code&gt;，win8 的四邊通常會藏有些功能，比方說右邊是&lt;code&gt;『系統快速鍵』&lt;/code&gt;; 上下方是&lt;code&gt;『Application Bar (App Bar)』&lt;/code&gt;(上方通常是導覽用途，下方通常是功能用途)，左邊是&lt;code&gt;『呼叫系統快速鍵』&lt;/code&gt;（你開過沒有關的app會在左邊）。&lt;/p&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031095237324dd239e_resize.png' /&gt;&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003117523732557dddf_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031095237324dd239e_resize.png' width='100%' /&gt;&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003117523732557dddf_resize.png' width='100%' /&gt;
 &lt;h3 id='appbar_application_bar'&gt;AppBar (Application Bar)&lt;/h3&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/2013091700315152373277e93bf_resize.png' /&gt;&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031585237327ee82a3_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/2013091700315152373277e93bf_resize.png' width='100%' /&gt;&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031585237327ee82a3_resize.png' width='100%' /&gt;
 &lt;h3 id='id16'&gt;表單元素&lt;/h3&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003303523732bf09f63_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003303523732bf09f63_resize.png' width='100%' /&gt;
 &lt;h3 id='search_bar_'&gt;Search Bar 搜尋框&lt;/h3&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003313523732c910935_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003313523732c910935_resize.png' width='100%' /&gt;
 &lt;h3 id='_appbar_'&gt;有 AppBar 的例子&lt;/h3&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003323523732d39ac7d_resize.png' /&gt;&lt;hr /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003323523732d39ac7d_resize.png' width='100%' /&gt;&lt;hr /&gt;
 &lt;h3 id='windows_8_strore_'&gt;Windows 8 Strore 看看有哪些現成的作品&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;(此圖截自：http://windows.microsoft.com/zh-tw/windows-8/apps#Cat=t1)&lt;/li&gt;
 
-&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003403523732fb568b9_resize.png' /&gt;&lt;/li&gt;
+&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003403523732fb568b9_resize.png' width='100%' /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;本來想寫一些 windows8 的操作/觸控方式，不過我沒有平板:P，此部分忍痛跳過。&lt;/p&gt;
@@ -398,7 +502,7 @@
 &lt;ul&gt;
 &lt;li&gt;這次的主題是『用 HTML5 和 JavaScript 學習開發 Windows Apps』，嚴格來說是 Windows 8 App 啦，好多人都以為我要寫 Windows Phone，可是我沒 Phone 可玩&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png' width='100%' /&gt;
 &lt;p&gt;（windows 8 開始畫面）&lt;/p&gt;
 
 &lt;ul&gt;
@@ -459,9 +563,9 @@
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id='id13'&gt;總結一下今天要做的事：&lt;/h2&gt;
-&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png' /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png' width='100%' /&gt;
 &lt;p&gt;如果你成功安裝完成後，開開看 Visual Studio 2012 吧！ 希望你/妳會跟我看到類似的畫面。 (之後我們會很常看到這個畫面XD)&lt;/p&gt;
-&lt;img width='50%' src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png' /&gt;&lt;hr /&gt;
+&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png' width='50%' /&gt;&lt;hr /&gt;
 &lt;p&gt;今日進度結束， 下一篇，可能是淺談 windows 8 的界面設計。&lt;/p&gt;
 
 &lt;p&gt;本篇同時轉載於 &lt;a href='http://ithelp.ithome.com.tw/question/10126693'&gt;it邦幫忙&lt;/a&gt;。&lt;/p&gt;
@@ -528,11 +632,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img title='' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' alt='altTitle' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' alt='altTitle' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img title='' width='100%' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' alt='altTitle' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' alt='altTitle' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
