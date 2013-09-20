@@ -24,14 +24,10 @@ tags : [windows 8 App]
 	* 實踐 CommonJS Promises/A
 	* UI組件
 	* DOM utilities
-	* 導航 and xhr (可以用來要資料)
----
-
-### 可以不要用它嗎
-
-* 恩… 我自己是覺得如果你不想用，也可以不要用。但是用它可以減少很多開發時間,比方說,已經有提供給你 WinJS.UI.SearchBox 的 API 給你用 了,而且這個 API 也提供完整的功能跟 layout,`你會想自己刻一個搜尋框嗎?`。
+	* 導航 and xhr
 
 ---
+
 ###WinJS 有哪些 API 呢? 舉例來說:
     
 * WinJS.Application
@@ -51,7 +47,7 @@ tags : [windows 8 App]
 * WinJS.UI.FlipView
 * WinJS.Utilities
 
-<p>最後要順帶一提的是,這兩個 API( WinRT 跟 WinJS ) 是 only for Windows Store App,也就 是說只能用在開發 windows 8 app 應用程式市集的 App,並沒有支援瀏覽器,也就是你直接點 首頁 default.html 不要天真的以為他會跑在IE或是其他瀏覽器上:P(因為我做過這種蠢事XD，也不至於不能跑啦，只是不會是你想像的樣子)。</p>
+<p>最後要順帶一提的是,這兩個 API( WinRT 跟 WinJS ) 是 only for Windows Store App,也就是說只能用在開發 windows 8 app 應用程式市集的 App,並沒有支援瀏覽器,也就是你直接點首頁 default.html 是可以用瀏覽器開，可是不會是你想要的樣子。</p>
 
 ---
 
