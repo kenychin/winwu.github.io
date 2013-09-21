@@ -4,13 +4,126 @@
  <title>Win.心得小筆記</title>
  <link href="http://winwu.github.io/" rel="self"/>
  <link href="http://winwu.github.io"/>
- <updated>2013-09-21T00:13:55+08:00</updated>
+ <updated>2013-09-22T00:56:14+08:00</updated>
  <id>http://winwu.github.io</id>
  <author>
    <name>Win Wu</name>
    <email>yiyingwu.1990@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Day7 介紹空白應用程式 Blank App</title>
+   <link href="http://winwu.github.io/windows-8-app/2013/09/22/day7-win8-app-blankapp"/>
+   <updated>2013-09-22T12:00:00+08:00</updated>
+   <id>http://winwu.github.io/windows-8-app/2013/09/22/day7-win8-app-blankapp</id>
+   <content type="html">&lt;p&gt;透過建立『空白應用程式』（Microsoft Design Blank App），我們來建立一些常見的 Windows UI 組件吧（總算可以開始寫一些code了XDD）！&lt;/p&gt;
+
+&lt;p&gt;這部分就先當做熱身，雖然這邊的介紹會比較碎片化，不過之後會介紹的 &lt;code&gt;Split App&lt;/code&gt; 或是 &lt;code&gt;Grid App&lt;/code&gt; 會有太多觀念要瞭解，一時之間我只好從最乾淨的 Blank App 講起。&lt;/p&gt;
+
+&lt;p&gt;雖然我說要來建立一些常見的 Window UI，但，怎麼知道到底有哪些 Windows UI 呢？完整到底有多少我也不清楚，不過有興趣的話可以看一下這個網址：&lt;a href='http://msdn.microsoft.com/en-us/library/windows/apps/br229782.aspx'&gt;WinJS.UI Namespace&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;之後可能會介紹這幾種：像 &lt;code&gt;AppBar&lt;/code&gt;, &lt;code&gt;FlipView&lt;/code&gt;, &lt;code&gt;Flyout&lt;/code&gt;&amp;#8230;等等。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;以下，會先開始新專案，介紹一下資料夾的結構跟內容分別是做什麼的然後才會開始進入到 AppBar 的撰寫。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id='id23'&gt;開始吧！&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;請開啓 Visual Studio，點選&lt;code&gt;『檔案』 →  『新增』 →  『專案』&lt;/code&gt;（或直接按 Ctrl + Shift + N）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-0.png' /&gt;
+&lt;p&gt;&lt;strong&gt;接著會出現起始畫面，選擇你要 App：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. 請選擇你要建立『空白應用程式』（格線與分割會在後頭章節提到）。
+2. App名稱可自己命名，預設會是 App+數字（你開了第幾個App）。
+3. 位置預設會在 Visual Studio 2012/Projects 底下，你也可以自己調整。
+4. 勾消『為方案建立目錄』，（個人習慣），主要是我不習慣多產生一層資料夾。
+5. 按確定。&lt;/code&gt;&lt;/pre&gt;
+&lt;img width='100%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-1.png' /&gt;
+&lt;ul&gt;
+&lt;li&gt;這時候，會花幾秒鐘的時間幫你建立你的 App，完成之後就會看到這個畫面：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img width='100%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-2.png' /&gt;
+&lt;p&gt;&lt;strong&gt;好了！ 等等呢，我們會在右側『方案總管』琢磨一下這個檔案下的內容。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id='id24'&gt;現在先聊一些環境的設定：&lt;/h4&gt;
+
+&lt;p&gt;1. 調整字型大小：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;在左下角有個100%可以將它調整高一點，讓文字變大。&lt;/code&gt;&lt;/pre&gt;
+&lt;img width='100%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-3.png' /&gt;
+&lt;p&gt;2. 顯示行號：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;選擇 『工具』 → 『選項』  → 『將顯示所有設定』 打開  →  選擇 文字編輯器 &amp;gt; 所有語言 &amp;gt; 一般。把『行號』打勾，若有需要自動換行的話，也可以一起設定。&lt;/code&gt;&lt;/pre&gt;
+&lt;img width='100%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-4.png' /&gt;
+&lt;p&gt;3. 編輯器的色系： 如果也想要調成深色的話，打開&lt;code&gt;『工具』 → 『選項』→ 『環境』&amp;gt; 『一般』→ 『色彩佈景主題』&lt;/code&gt;調整成深色。&lt;br /&gt;&lt;img width='100%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-5.png' /&gt;&lt;/p&gt;
+
+&lt;h3 id='blank_app'&gt;空白應用程式(blank app)的檔案結構：&lt;/h3&gt;
+&lt;img width='50%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-6.png' /&gt;
+&lt;ul&gt;
+&lt;li&gt;空白應用程式 Blank App 是最基本的範本，基本也代表著這些檔案，可能是都是些很重 要的，挑幾個說：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;package.appxmanifest&lt;/strong&gt; 有點類似全站的設定檔，App名稱, App介紹, 列出這個 App 包含的文件，裡面還會需要設定一些logo的圖檔, 總共需要替換這幾個logo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* logo.png
+* smalllogo.png （小的logo）
+* storelogo.png (上架到市集的logo)
+* splashscreen.png (啓動應用程式時的畫面)&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;default.html&lt;/strong&gt; 是起始畫面，寫 web 的人會知道以前寫 default.html 也算是首頁的一種命名（default.html 會搭配 default.js，這些檔案會在 App 運行的時候使用到）&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;default.js&lt;/strong&gt; 這個檔案，用來處理整個 App 應用週期的程式碼（比方說啓動WinJS之類的），之後的範例也會很常在這裡寫Code。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;css 資料夾&lt;/strong&gt; 可以在這資料夾新增自己所需要的JavaScript File。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;js 資料夾&lt;/strong&gt; 可以在這資料夾新增自己所需要的JavaScript File。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;官方文件有提到說，如果你是用 JavaScrip 開發 windows App，這些檔案都是基本且必備的。參考：&lt;a href='http://msdn.microsoft.com/zh-TW/library/windows/apps/hh986964.aspx'&gt;http://msdn.microsoft.com/zh-TW/library/windows/apps/hh986964.aspx&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id='_blank_app'&gt;啓動/關閉 你的Blank App&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;按鍵盤 F5 或工具列上的 &lt;img width='20%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-7.png' /&gt; 執行於『本機電腦』&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;啓動之後你會先看到啓動畫面 (splashscreen.png) ，接著才會進入到內容的部分。 （啓動畫面） &lt;img width='50%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-8.png' /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;* 內容部分通常是黑底，然後什麼都沒有，因為我們也沒增加什麼內容。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ok你已經做完了一件偉大的事情了，那就是看到你的Blank App真正跑起來的樣子。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;接著怎麼關掉它呢？&lt;/strong&gt; * 若要關閉應用程式，從螢幕的上邊緣向下撥動直到下邊緣，或是按 &lt;code&gt;『Alt＋F4』&lt;/code&gt;，另外如果你不小心進入到偵錯模式，那麼你會發現你可能無法編輯你的檔案，你必須先關掉偵錯，在 Visual Studio 中，按一下 &lt;code&gt;『偵錯』 &amp;gt; 『停止偵錯』&lt;/code&gt; 用來關閉應用程式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;今日進度結束，下一篇來做些小東西。&lt;/p&gt;
+
+&lt;p&gt;如有任何問題，歡迎留言。雖然我不一定會 :P，但盡可能找到 reference 或解答。&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Day6  Windows API  For Windows App（二） WinJS</title>
@@ -497,7 +610,7 @@
 &lt;h3 id='id14'&gt;Ｃ模型配置示意圖&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170026295237313533897_resize.png' width='100%' /&gt;&lt;/li&gt;
+&lt;li&gt;C模型配置的特色是右邊是沒有邊框的，具有暗示使用者右邊還有內容的作用。 &lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170026295237313533897_resize.png' /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id='windows_8_app_layout'&gt;Windows 8 App Layout&lt;/h2&gt;
@@ -561,21 +674,21 @@
 &lt;p&gt;為了怕沒有 window 8 的人不知道 window8 的一些畫面，所以截了一些圖片。&lt;/p&gt;
 
 &lt;p&gt;起始畫面，通常會看到畫面有很多&lt;code&gt;動態磚(Live Tile)&lt;/code&gt;，win8 的四邊通常會藏有些功能，比方說右邊是&lt;code&gt;『系統快速鍵』&lt;/code&gt;; 上下方是&lt;code&gt;『Application Bar (App Bar)』&lt;/code&gt;(上方通常是導覽用途，下方通常是功能用途)，左邊是&lt;code&gt;『呼叫系統快速鍵』&lt;/code&gt;（你開過沒有關的app會在左邊）。&lt;/p&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031095237324dd239e_resize.png' width='100%' /&gt;&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003117523732557dddf_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031095237324dd239e_resize.png' /&gt;&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003117523732557dddf_resize.png' /&gt;
 &lt;h3 id='appbar_application_bar'&gt;AppBar (Application Bar)&lt;/h3&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/2013091700315152373277e93bf_resize.png' width='100%' /&gt;&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031585237327ee82a3_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/2013091700315152373277e93bf_resize.png' /&gt;&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/201309170031585237327ee82a3_resize.png' /&gt;
 &lt;h3 id='id16'&gt;表單元素&lt;/h3&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003303523732bf09f63_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003303523732bf09f63_resize.png' /&gt;
 &lt;h3 id='search_bar_'&gt;Search Bar 搜尋框&lt;/h3&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003313523732c910935_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003313523732c910935_resize.png' /&gt;
 &lt;h3 id='_appbar_'&gt;有 AppBar 的例子&lt;/h3&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003323523732d39ac7d_resize.png' width='100%' /&gt;&lt;hr /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003323523732d39ac7d_resize.png' /&gt;&lt;hr /&gt;
 &lt;h3 id='windows_8_strore_'&gt;Windows 8 Strore 看看有哪些現成的作品&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;(此圖截自：http://windows.microsoft.com/zh-tw/windows-8/apps#Cat=t1)&lt;/li&gt;
 
-&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003403523732fb568b9_resize.png' width='100%' /&gt;&lt;/li&gt;
+&lt;li&gt;可以點選一些 App 看看裡面的內容。 &lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130917/20130917003403523732fb568b9_resize.png' /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;本來想寫一些 windows8 的操作/觸控方式，不過我沒有平板:P，此部分忍痛跳過。&lt;/p&gt;
@@ -611,7 +724,7 @@
 &lt;ul&gt;
 &lt;li&gt;這次的主題是『用 HTML5 和 JavaScript 學習開發 Windows Apps』，嚴格來說是 Windows 8 App 啦，好多人都以為我要寫 Windows Phone，可是我沒 Phone 可玩&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130916/201309161325245236964406693_resize.png' /&gt;
 &lt;p&gt;（windows 8 開始畫面）&lt;/p&gt;
 
 &lt;ul&gt;
@@ -672,9 +785,9 @@
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id='id13'&gt;總結一下今天要做的事：&lt;/h2&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png' width='100%' /&gt;
+&lt;img width='100%' src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132740523696cccdc0a_resize.png' /&gt;
 &lt;p&gt;如果你成功安裝完成後，開開看 Visual Studio 2012 吧！ 希望你/妳會跟我看到類似的畫面。 (之後我們會很常看到這個畫面XD)&lt;/p&gt;
-&lt;img src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png' width='50%' /&gt;&lt;hr /&gt;
+&lt;img width='50%' src='http://ithelp.ithome.com.tw/upload/images/20130916/20130916132722523696ba70a12_resize.png' /&gt;&lt;hr /&gt;
 &lt;p&gt;今日進度結束， 下一篇，可能是淺談 windows 8 的界面設計。&lt;/p&gt;
 
 &lt;p&gt;本篇同時轉載於 &lt;a href='http://ithelp.ithome.com.tw/question/10126693'&gt;it邦幫忙&lt;/a&gt;。&lt;/p&gt;
@@ -741,11 +854,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img alt='altTitle' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' width='100%' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img title='' width='100%' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img alt='altTitle' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' width='100%' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img title='' width='100%' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 

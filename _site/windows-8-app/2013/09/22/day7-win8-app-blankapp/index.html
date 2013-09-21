@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <title>Day7 介紹空白應用程式 Blank App</title>
+    
+    <meta name="author" content="Win Wu">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/mygithub.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    <script type="text/javascript" src="/assets/themes/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/assets/themes/jquery.pjax.js"></script>
+  </head>
+
+  <body>
+    <div id="navbar_pager" class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/windows-8-app/2013/09/21/day6-win8-app-winjs" title="Day6  Windows API  For Windows App（二） WinJS">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a id="go2homepage" class="brand" href="/" data-pjax>Win.心得小筆記</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+      <div class="content content-left pull-left">
+        <h3>Hi</h3><h4>I am <span class="myname">Win</span></h4>
+        <!--i class="icon-github"></i-->
+        Frontend Engineer.<br/>
+        Please see <a href="/about.html" data-pjax>About Win</a>
+        <div style="margin-bottom:40px"></div>
+        <script src="http://ithelp.ithome.com.tw/ironman6/sticker/dev/20061739"></script>
+      </div>
+      <div class="content content-right pull-right">
+        <div class="pagination">
+        <ul>
+        
+        <li class="prev"><a href="/windows-8-app/2013/09/21/day6-win8-app-winjs" title="Day6  Windows API  For Windows App（二） WinJS">&larr; Previous</a></li>
+        
+        <li><a href="/archive.html">Archive</a></li>
+        
+        <li class="next disabled"><a>Next &rarr;</a>
+        
+        </ul>
+        </div>
+
+        <div id="pjax-container">
+        
+<div id="post_html_wrap">
+<div class="page-header">
+  <h1>Day7 介紹空白應用程式 Blank App <small>HTML5 X JavaScript 開發 Windows 8 Apps</small></h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>22 September 2013</span>
+    </div>
+    <div class="content">
+      <p>透過建立『空白應用程式』（Microsoft Design Blank App），我們來建立一些常見的 Windows UI 組件吧（總算可以開始寫一些code了XDD）！</p>
+
+<p>這部分就先當做熱身，雖然這邊的介紹會比較碎片化，不過之後會介紹的 <code>Split App</code> 或是 <code>Grid App</code> 會有太多觀念要瞭解，一時之間我只好從最乾淨的 Blank App 講起。</p>
+
+<p>雖然我說要來建立一些常見的 Window UI，但，怎麼知道到底有哪些 Windows UI 呢？完整到底有多少我也不清楚，不過有興趣的話可以看一下這個網址：<a href='http://msdn.microsoft.com/en-us/library/windows/apps/br229782.aspx'>WinJS.UI Namespace</a>。</p>
+
+<p>之後可能會介紹這幾種：像 <code>AppBar</code>, <code>FlipView</code>, <code>Flyout</code>&#8230;等等。</p>
+<hr />
+<p>以下，會先開始新專案，介紹一下資料夾的結構跟內容分別是做什麼的然後才會開始進入到 AppBar 的撰寫。</p>
+<hr />
+<h2 id='id23'>開始吧！</h2>
+
+<ul>
+<li>請開啓 Visual Studio，點選<code>『檔案』 →  『新增』 →  『專案』</code>（或直接按 Ctrl + Shift + N）。</li>
+</ul>
+<img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-0.png' />
+<p><strong>接著會出現起始畫面，選擇你要 App：</strong></p>
+
+<pre><code>1. 請選擇你要建立『空白應用程式』（格線與分割會在後頭章節提到）。
+2. App名稱可自己命名，預設會是 App+數字（你開了第幾個App）。
+3. 位置預設會在 Visual Studio 2012/Projects 底下，你也可以自己調整。
+4. 勾消『為方案建立目錄』，（個人習慣），主要是我不習慣多產生一層資料夾。
+5. 按確定。</code></pre>
+<img width='100%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-1.png' />
+<ul>
+<li>這時候，會花幾秒鐘的時間幫你建立你的 App，完成之後就會看到這個畫面：</li>
+</ul>
+<img width='100%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-2.png' />
+<p><strong>好了！ 等等呢，我們會在右側『方案總管』琢磨一下這個檔案下的內容。</strong></p>
+
+<h4 id='id24'>現在先聊一些環境的設定：</h4>
+
+<p>1. 調整字型大小：</p>
+
+<pre><code>在左下角有個100%可以將它調整高一點，讓文字變大。</code></pre>
+<img width='100%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-3.png' />
+<p>2. 顯示行號：</p>
+
+<pre><code>選擇 『工具』 → 『選項』  → 『將顯示所有設定』 打開  →  選擇 文字編輯器 &gt; 所有語言 &gt; 一般。把『行號』打勾，若有需要自動換行的話，也可以一起設定。</code></pre>
+<img width='100%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-4.png' />
+<p>3. 編輯器的色系： 如果也想要調成深色的話，打開<code>『工具』 → 『選項』→ 『環境』&gt; 『一般』→ 『色彩佈景主題』</code>調整成深色。<br /><img width='100%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-5.png' /></p>
+
+<h3 id='blank_app'>空白應用程式(blank app)的檔案結構：</h3>
+<img width='50%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-6.png' />
+<ul>
+<li>空白應用程式 Blank App 是最基本的範本，基本也代表著這些檔案，可能是都是些很重 要的，挑幾個說：</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>package.appxmanifest</strong> 有點類似全站的設定檔，App名稱, App介紹, 列出這個 App 包含的文件，裡面還會需要設定一些logo的圖檔, 總共需要替換這幾個logo:</p>
+
+<pre><code>* logo.png
+* smalllogo.png （小的logo）
+* storelogo.png (上架到市集的logo)
+* splashscreen.png (啓動應用程式時的畫面)</code></pre>
+</li>
+
+<li>
+<p><strong>default.html</strong> 是起始畫面，寫 web 的人會知道以前寫 default.html 也算是首頁的一種命名（default.html 會搭配 default.js，這些檔案會在 App 運行的時候使用到）</p>
+</li>
+
+<li>
+<p><strong>default.js</strong> 這個檔案，用來處理整個 App 應用週期的程式碼（比方說啓動WinJS之類的），之後的範例也會很常在這裡寫Code。</p>
+</li>
+
+<li>
+<p><strong>css 資料夾</strong> 可以在這資料夾新增自己所需要的JavaScript File。</p>
+</li>
+
+<li>
+<p><strong>js 資料夾</strong> 可以在這資料夾新增自己所需要的JavaScript File。</p>
+</li>
+
+<li>
+<p>官方文件有提到說，如果你是用 JavaScrip 開發 windows App，這些檔案都是基本且必備的。參考：<a href='http://msdn.microsoft.com/zh-TW/library/windows/apps/hh986964.aspx'>http://msdn.microsoft.com/zh-TW/library/windows/apps/hh986964.aspx</a></p>
+</li>
+</ul>
+
+<h4 id='_blank_app'>啓動/關閉 你的Blank App</h4>
+
+<ul>
+<li>
+<p>按鍵盤 F5 或工具列上的 <img width='20%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-7.png' /> 執行於『本機電腦』</p>
+</li>
+
+<li>
+<p>啓動之後你會先看到啓動畫面 (splashscreen.png) ，接著才會進入到內容的部分。 （啓動畫面） <img width='50%' src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day7-8.png' /></p>
+</li>
+</ul>
+
+<p>* 內容部分通常是黑底，然後什麼都沒有，因為我們也沒增加什麼內容。</p>
+
+<ul>
+<li>
+<p>ok你已經做完了一件偉大的事情了，那就是看到你的Blank App真正跑起來的樣子。</p>
+</li>
+
+<li>
+<p><strong>接著怎麼關掉它呢？</strong> * 若要關閉應用程式，從螢幕的上邊緣向下撥動直到下邊緣，或是按 <code>『Alt＋F4』</code>，另外如果你不小心進入到偵錯模式，那麼你會發現你可能無法編輯你的檔案，你必須先關掉偵錯，在 Visual Studio 中，按一下 <code>『偵錯』 &gt; 『停止偵錯』</code> 用來關閉應用程式。</p>
+</li>
+</ul>
+<hr />
+<p>今日進度結束，下一篇來做些小東西。</p>
+
+<p>如有任何問題，歡迎留言。雖然我不一定會 :P，但盡可能找到 reference 或解答。</p>
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#windows-8-app-ref">
+    		windows-8-app <span>8</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#windows 8 App-ref">windows 8 App <span>8</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/windows-8-app/2013/09/21/day6-win8-app-winjs" title="Day6  Windows API  For Windows App（二） WinJS">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'winwugithubio'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+</div>
+</div>
+
+
+        </div>
+      </div>
+      <hr class="clearfix">
+      <footer class="clearfix">
+        <p>&copy; 2013 Win Wu
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div>
+
+    
+    <script>
+    //$('#pjax-container').hide().fadeIn(1000);
+    $(document).pjax('a[data-pjax]', '#pjax-container');
+    /*$(document).on('pjax:send', function() {
+      console.log('show');
+    });*/
+    $('#pjax-container').hide().fadeIn(1000);
+
+$(document).ready(function(){
+  var $navbar = $('.navbar');
+  var $navbar_pager = $('#navbar_pager');
+  var $w=$(window);       
+  $w.scroll(function(event){
+      if( $w.scrollTop()>42 ){
+          //console.log('該fix了');
+          $navbar_pager.css('display','block');
+          $navbar.css({
+              'position':'fixed',
+              'opacity':'0.8',
+          });
+      }else{
+          //console.log('不用fix');
+          $navbar_pager.css('display','none');
+          $navbar.css({
+              'position':'static',
+              'opacity':'1',
+          });
+      }
+  });
+
+});
+
+    </script>
+  </body>
+</html>
+
