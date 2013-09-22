@@ -123,8 +123,6 @@
         <!--i class="icon-github"></i-->
         Frontend Engineer.<br/>
         Please see <a href="/about.html" data-pjax>About Win</a>
-        <div style="margin-bottom:40px"></div>
-        <script src="http://ithelp.ithome.com.tw/ironman6/sticker/dev/20061739"></script>
       </div>
       <div class="content content-right pull-right">
         <div class="pagination">
@@ -366,7 +364,7 @@ $(document).ready(function(){
       if( $w.scrollTop()>42 ){
           //console.log('該fix了');
           $navbar_pager.css('display','block');
-          $navbar.css({
+          $navbar.slideDown().css({
               'position':'fixed',
               'opacity':'0.8',
           });
@@ -374,7 +372,7 @@ $(document).ready(function(){
           //console.log('不用fix');
           $navbar_pager.css('display','none');
           $navbar.css({
-              'position':'static',
+              'position':'absolute',
               'opacity':'1',
           });
       }

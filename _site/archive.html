@@ -123,8 +123,6 @@
         <!--i class="icon-github"></i-->
         Frontend Engineer.<br/>
         Please see <a href="/about.html" data-pjax>About Win</a>
-        <div style="margin-bottom:40px"></div>
-        <script src="http://ithelp.ithome.com.tw/ironman6/sticker/dev/20061739"></script>
       </div>
       <div class="content content-right pull-right">
         <div class="pagination">
@@ -163,6 +161,21 @@
       <h2>2013</h2>
       <h3>September</h3>
       <ul>
+    
+  
+    <li><span>September 22, 2013</span> &raquo; <a href="/2013/09/22/nodejs-for-f2e-ch01">Node for Front End Developers - chapter01 讀書筆記</a></li>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
     
   
     <li><span>September 22, 2013</span> &raquo; <a href="/windows-8-app/2013/09/22/day7-win8-app-simulator">Day7 visual studio 2012 模擬器(Simulator)的介紹</a></li>
@@ -401,7 +414,7 @@ $(document).ready(function(){
       if( $w.scrollTop()>42 ){
           //console.log('該fix了');
           $navbar_pager.css('display','block');
-          $navbar.css({
+          $navbar.slideDown().css({
               'position':'fixed',
               'opacity':'0.8',
           });
@@ -409,7 +422,7 @@ $(document).ready(function(){
           //console.log('不用fix');
           $navbar_pager.css('display','none');
           $navbar.css({
-              'position':'static',
+              'position':'absolute',
               'opacity':'1',
           });
       }

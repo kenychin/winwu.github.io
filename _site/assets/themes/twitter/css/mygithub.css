@@ -15,11 +15,13 @@
 .navbar{
     width:100%;
     z-index: 1;
-    margin-bottom: 0
+    position: absolute;
+    top: 0px;
 }
 .navbar-inner{
     background: rgb(24, 33, 61);
     border-radius: 0;
+    border: none;
 }
 .navbar .brand{
     color:#fff;
@@ -44,9 +46,11 @@
 .content-left{
     color:#999;
     width:25%;
+    margin-top: 40px;
 }
 .content-right{
     width:75%;
+    margin-top: 40px;
 }
 .myname{
 

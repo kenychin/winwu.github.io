@@ -123,8 +123,6 @@
         <!--i class="icon-github"></i-->
         Frontend Engineer.<br/>
         Please see <a href="/about.html" data-pjax>About Win</a>
-        <div style="margin-bottom:40px"></div>
-        <script src="http://ithelp.ithome.com.tw/ironman6/sticker/dev/20061739"></script>
       </div>
       <div class="content content-right pull-right">
         <div class="pagination">
@@ -182,11 +180,11 @@
 
 <ul>
 <li>
-<p>Demo畫面1：（homepage/index.html）: <a href='http://winwu.github.io/pureCSS-practice/homepage/'><img width='100%' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' alt='altTitle' /></a></p>
+<p>Demo畫面1：（homepage/index.html）: <a href='http://winwu.github.io/pureCSS-practice/homepage/'><img width='100%' title='' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' /></a></p>
 </li>
 
 <li>
-<p>Demo畫面2： <img width='100%' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' alt='altTitle' /></p>
+<p>Demo畫面2： <img width='100%' title='' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' /></p>
 </li>
 </ul>
 
@@ -310,7 +308,7 @@ $(document).ready(function(){
       if( $w.scrollTop()>42 ){
           //console.log('該fix了');
           $navbar_pager.css('display','block');
-          $navbar.css({
+          $navbar.slideDown().css({
               'position':'fixed',
               'opacity':'0.8',
           });
@@ -318,7 +316,7 @@ $(document).ready(function(){
           //console.log('不用fix');
           $navbar_pager.css('display','none');
           $navbar.css({
-              'position':'static',
+              'position':'absolute',
               'opacity':'1',
           });
       }

@@ -4,13 +4,194 @@
  <title>Win.心得小筆記</title>
  <link href="http://winwu.github.io/" rel="self"/>
  <link href="http://winwu.github.io"/>
- <updated>2013-09-22T14:23:53+08:00</updated>
+ <updated>2013-09-22T22:53:50+08:00</updated>
  <id>http://winwu.github.io</id>
  <author>
    <name>Win Wu</name>
    <email>yiyingwu.1990@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Node for Front End Developers - chapter01 讀書筆記</title>
+   <link href="http://winwu.github.io/2013/09/22/nodejs-for-f2e-ch01"/>
+   <updated>2013-09-22T21:00:00+08:00</updated>
+   <id>http://winwu.github.io/2013/09/22/nodejs-for-f2e-ch01</id>
+   <content type="html">&lt;img width='100%' src='http://1.bp.blogspot.com/-aezAjcCEVVA/Uj7qyl_-6qI/AAAAAAAAEFQ/7xKG7b_nNi4/s640/IMG_0151.JPG' /&gt;
+&lt;ul&gt;
+&lt;li&gt;書籍資訊 : Node for Front-End Developers by Garann Means(O&amp;#8217;Reilly).copyright 2012 Garann Means, 978-1-449-31883-3&lt;/li&gt;
+
+&lt;li&gt;參考網址：&lt;a href='http://shop.oreilly.com/product/0636920023258.do'&gt;Node for Front-End Developers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='id29'&gt;本書目錄：&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Chapter 1 Getting Node Set Up&lt;/li&gt;
+
+&lt;li&gt;Chapter 2 Serving Simple Content&lt;/li&gt;
+
+&lt;li&gt;Chapter 3 Interaction with the Client&lt;/li&gt;
+
+&lt;li&gt;Chapter 4 Server-Side Templates&lt;/li&gt;
+
+&lt;li&gt;Chapter 5 Data Sources and Flow Control&lt;/li&gt;
+
+&lt;li&gt;Chapter 6 Model-View-Controller and Sharing Code&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id='id30'&gt;我的前言&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;這本書今年暑假以600多元台幣購入（蠻貴的&amp;#8230;），等了快兩週才寄來，至今才開始看:P&lt;/li&gt;
+
+&lt;li&gt;內容只有 6 個章節，僅僅45頁。&lt;/li&gt;
+
+&lt;li&gt;雖然 node 之於我，我並非熟手，但老實說這本書應該不像是給初學者看的，建議裝過 node.js，裝過 npm 的人看看。&lt;/li&gt;
+
+&lt;li&gt;作為 Front-End 寫 node.js，會有一些不適應症，我覺得這是正常的，但這也才是有趣的地方，一直要去想 How about write JavaScript on Back-End，跟自己所熟悉的 browser 的環境，完全是不同的兩世界。&lt;/li&gt;
+
+&lt;li&gt;輕鬆學就好，雖然目前工作沒有大量使用，不過 Nice to Know。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='id31'&gt;這本書的特色，以及能給你的觀念&amp;#8230;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;把 node 裝起來，如何 scaffolding 一個 web (所謂 scaffolding 就是鷹架，你可以把這裡的鷹架想像成一棟大樓的樑柱結構，如何快速建立一個具有基礎架構的 web Application)。&lt;/li&gt;
+
+&lt;li&gt;node 就像 web server。&lt;/li&gt;
+
+&lt;li&gt;了解 node 怎麼接資料，在 php 我們用 &lt;code&gt;$_GET&lt;/code&gt; 與 &lt;code&gt;$_POST&lt;/code&gt; 接收 get 與 post 資料，那 node 呢？&lt;/li&gt;
+
+&lt;li&gt;使用 &lt;code&gt;socket.IO&lt;/code&gt; 實踐 realtime client-server 的溝通。&lt;/li&gt;
+
+&lt;li&gt;使用 &lt;code&gt;template engine&lt;/code&gt; 寫 web。（我還沒看到那個章節，不過就我所知的 template engine 有 EJS, Jade）。&lt;/li&gt;
+
+&lt;li&gt;如何連接 database, 如何存資料。&lt;/li&gt;
+
+&lt;li&gt;介紹 MVC（Model-View-Controller） pattern。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2 id='chapter_1'&gt;Chapter 1&lt;/h2&gt;
+
+&lt;h2 id='getting_node_set_up'&gt;Getting Node Set Up&lt;/h2&gt;
+
+&lt;h3 id='id32'&gt;前言&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;說明 node 的安裝，本來 node 是裝在 Unix like 的作業系統，但現在 windows 也能裝了，看你的環境是什麼，就怎麼裝。&lt;/li&gt;
+
+&lt;li&gt;本書是假設讀者使用 Mac 的作業環境，但如果你不是，也不用擔心，如果有需要其他作業環境需要注意的事項，也會提及。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='node__npm'&gt;Node 跟 NPM&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安裝 Node 有很多種方式，可以從官網下載。&lt;a href='http://nodejs.org/'&gt;http://nodejs.org/&lt;/a&gt;，你也可以用 git 下載：&lt;/p&gt;
+&lt;pre&gt;
+$ git clone git://github.com/joyent/node.git
+$ cd node
+$ git checkout v0.6.6
+$ ./configure
+$ make
+$ nake install&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;來源出處：Node for Front-End Developers by Garann Means(O&amp;#8217;Reilly).copyright 2012 Garann Means, 978-1-449-31883-3 . page1&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;利用 &lt;code&gt;git checkout vx.x.x&lt;/code&gt; 是為了切換到穩定的 node 版本，你可以自由選擇你要切到什麼版本，利用 &lt;code&gt;git tag&lt;/code&gt; 指令查看有哪些版本可用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;假如你想安裝 npm，可以直接透過 command-line :&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ curl http://npmjs.org/install.sh | sh&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;什麼是NPM? npm 是 &lt;code&gt;N&lt;/code&gt;ode &lt;code&gt;P&lt;/code&gt;ackage &lt;code&gt;M&lt;/code&gt;anager，這個 manager 包含了很多 node 的模組(Module)，以及第三方套件，讓你夠過一個指令就可以下載你要的套件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='repl'&gt;REPL&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Real-Eval-Print-Loop，這有點難解釋耶… 簡單來說就是可以在 command-line 直接打指令，就像我們會在 chrome 的 F12 (開發人員)的 console 打一些測試 JavaScript 的指令（ex:alert(&amp;#8216;AAA&amp;#8217;); 或是 console.log(&amp;#8216;BBB&amp;#8217;);）的感覺，console 會直接回應你你所打的指令。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;參考：&lt;a href='http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop'&gt;Read–eval–print loop-From Wikipedia, the free encyclopedia&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;這裡之所以會提到 REPL 其實是因為 node 本身就是一個指令，如果你不知道你要執行哪一個檔案（application），你可以直接在 command-line 輸入 node，就會進入到 REPL 的模式，然後做一些簡單的運算他也會真的回應你，真的就跟瀏覽器的console蠻像的。&lt;/p&gt;
+&lt;img src='http://4.bp.blogspot.com/-5CvnVXe4jdY/Uj75cgRK7gI/AAAAAAAAEFs/crxBXfTBVT4/s320/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2013-09-22+%E4%B8%8B%E5%8D%8810.08.52.png' /&gt;&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;如果你要跳出 REPL 模式必須按 &lt;code&gt;Ctrl&lt;/code&gt;+&lt;code&gt;C&lt;/code&gt;跳出（有的人必須按兩次）。&lt;/p&gt;
+&lt;img src='http://2.bp.blogspot.com/-ScGkxoohjrI/Uj75cjV-ASI/AAAAAAAAEFo/UZf6HEAmXZY/s320/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2013-09-22+%E4%B8%8B%E5%8D%8810.09.06.png' /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ctrl+C 是什麼？ 這個關係到 Linux 的程序訊號（signal），所謂程序訊號就是送出一個訊號給某個程序，控制該程序的行為，因為 signal 有很多種，ctrl+c 其實就是一種訊號，該訊號是 SIGINT(2號)，代表著中斷或停止程序。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='file_organization'&gt;File Organization&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;只要安裝了 node, 你就可以開始規劃你的 web application，你可以把資料放在任何地方。不過資料夾內的檔案結構，會希望你照著一些常見的規則去規劃，比方說 web application 的目錄下要有 &lt;code&gt;pacjage.json&lt;/code&gt;, 甚至你的主程式的檔案會放在資料夾目錄下。 * 一些常見的目錄我們希望在目錄的第一層就看到：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;node_modules : 放一些在你的 local 從 npm 所安裝的 modules&lt;/li&gt;
+
+&lt;li&gt;lib : 屬於這個 application 共用或是自訂的 modules&lt;/li&gt;
+
+&lt;li&gt;public / www / similar : 主要一些靜態檔案（static files），或是client-side用的一些檔案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;目錄的規劃全看你的需求，如果你要打造的是具有 MVC patter 的 web application，建議你的資料夾底下要有 &lt;code&gt;models&lt;/code&gt;, &lt;code&gt;views&lt;/code&gt;, &lt;code&gt;contollers&lt;/code&gt; 這些資料夾。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;如果你要使用像是 &lt;code&gt;Express&lt;/code&gt; 這樣的 Framework ，通常你的目錄底下還有一個 routes 的資料夾。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;package.json 這個檔案蠻重要的，這個檔案會記錄你的 application 需要（會）跟哪些 module(模組) 具有相依性。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;package.json 寫起來會像這樣：&lt;/p&gt;
+&lt;pre&gt;
+{
+&quot;name&quot; : &quot;myNode&quot;,
+&quot;author&quot; : &quot;WinWu&quot;,
+&quot;description&quot; : &quot;This is my node&quot;,
+&quot;version&quot; : &quot;0.0.1&quot;,
+&quot;dependencies&quot; : {
+	&quot;express&quot; : &quot;2.5.x&quot;
+},
+&quot;engine&quot; : &quot;0.6.x&quot;,
+&quot;main&quot; : &quot;app,js&quot;
+}
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;dependencies 是蠻重要的一個部分，假如有一天把這個 web application 移到別的地方或目錄下，只需要透過 &lt;code&gt;npm install&lt;/code&gt; 指令，就可以一次把所有這個 web application 所需要相依的 module 都安裝好。&lt;/li&gt;
+
+&lt;li&gt;關於 package.json ，以前我有寫過一篇文章，有興趣歡迎賞臉觀看 :P &lt;a href='http://yiyingloveart.blogspot.tw/2013/04/nodejs-package.html'&gt;node.js 一個package的檔案結構&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;待續，下篇不知道會是什麼時候。&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Day7 visual studio 2012 模擬器(Simulator)的介紹</title>
@@ -923,11 +1104,11 @@
 
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img width='100%' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' alt='altTitle' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面1：（homepage/index.html）: &lt;a href='http://winwu.github.io/pureCSS-practice/homepage/'&gt;&lt;img width='100%' title='' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 
 &lt;li&gt;
-&lt;p&gt;Demo畫面2： &lt;img width='100%' title='' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' alt='altTitle' /&gt;&lt;/p&gt;
+&lt;p&gt;Demo畫面2： &lt;img width='100%' title='' alt='altTitle' src='https://raw.github.com/winwu/pureCSS-practice/master/homepage/demo2.png' /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
