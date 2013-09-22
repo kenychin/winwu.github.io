@@ -21,7 +21,7 @@ tags : [windows 8 App]
 
 ### 從本機電腦切換成模擬器
 
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-1.png" width="50%"/>
+<img src="http://1.bp.blogspot.com/-XQA2pgjgtak/Uj6J0k2uvvI/AAAAAAAAEDE/iyUYcaekfIE/s1600/day71-1.png" width="100%"/>
 
 * 首先你要先開啓一個專案。 
 
@@ -31,7 +31,7 @@ tags : [windows 8 App]
 
 ### 模擬器的界面
  
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-2.png" width="100%"/>
+<img src="http://4.bp.blogspot.com/-Zk-oTeHDQ_c/Uj6J_xBUONI/AAAAAAAAEDM/IGWFm16WAQM/s640/day71-2.png" width="100%"/>
 
 * 模擬器啓動後，會模擬你當下的專案。
 * 右邊有很多功能列，各有不同的功能，一個一個來看吧，圖標可能不清楚，不過原則就是由上往下是1~12號。
@@ -51,37 +51,36 @@ tags : [windows 8 App]
 	12. screenshot setting
 	
 
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-3.png" width="5%"/>
+<img src="http://2.bp.blogspot.com/-xkVeD85vjzA/Uj6KIhDWhmI/AAAAAAAAEDU/vULzWGIgNAc/s1600/day71-3.png" width="15%"/>
 
 
 ###相關圖片###
 * 因為模擬器的圖片截不起來（裡面畫面截得起來，可是外面的界面沒辦法），所以我只好用拍的。
 
 這一張是 模擬觸控zooming 的樣子。
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-6.png" width="100%"/>
+<img src="http://3.bp.blogspot.com/-Fdf0z7r7wm0/Uj6Kk9HPAxI/AAAAAAAAEEE/zHRNrkzx3UM/s1600/day71-6.png" width="100%"/>
 
 模擬區域會內容也可以切換回開始畫面。
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-7.png" width="100%"/>
+<img src="http://3.bp.blogspot.com/-mi97sURqRkM/Uj6KnfkD0-I/AAAAAAAAEEU/ua6JzNGMdVg/s1600/day71-7.png" width="100%"/>
 
 向右向左旋轉時改面顯示方向。
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-8.png" width="100%"/>
+<img src="http://2.bp.blogspot.com/-Nzn6gUkWUdQ/Uj6KmYYSmLI/AAAAAAAAEEM/yUK57IjnG6g/s1600/day71-8.png" width="100%"/>
 
 選擇各種不同螢幕大小。
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-9.png" width="100%"/>
+<img src="http://1.bp.blogspot.com/-UAUWLKHA6no/Uj6KduEoWhI/AAAAAAAAEDk/6Sy8a1eq1hI/s1600/day71-10.png" width="100%"/>
 
 使用GPS定位時需要取得現在位置。
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-10.png" width="100%"/>
+<img src="http://1.bp.blogspot.com/-ifFs8zzl5j0/Uj6KhM8pZcI/AAAAAAAAED8/ufmBN-ztwA0/s1600/day71-11.png" width="100%"/>
 
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-11.png" width="100%"/>
-
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-12.png" width="100%"/>
-
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-13.png" width="100%"/>
+<img src="http://2.bp.blogspot.com/-vz_bRAZtiKc/Uj6KciakMuI/AAAAAAAAEDc/GDxtYnj2IqA/s1600/day71-12.png" width="100%"/>
 
 
-* 關掉模擬器，要在下方工具列選擇關閉視窗。
+<img src="http://3.bp.blogspot.com/-u2stv9gGJtY/Uj6KffFCDwI/AAAAAAAAEDs/rSgWOKuj-So/s1600/day71-13.png" width="100%"/>
 
-<img src="https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-4.png" width="60%"/>
+
+###關掉模擬器，要在下方工具列選擇關閉視窗。
+
+<img src="http://1.bp.blogspot.com/-yV4BZGcmzKM/Uj6KfsdF2zI/AAAAAAAAEDo/fv-WmNRW3Vs/s1600/day71-4.png" width="60%"/>
 
 
 ---
