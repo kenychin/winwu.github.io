@@ -3,7 +3,7 @@
 <html lang="zh-TW">
   <head>
     <meta charset="utf-8">
-    <title>Day6  Windows API  For Windows App（二） WinJS</title>
+    <title>Day7 visual studio 2012 模擬器(Simulator)的介紹</title>
     
     <meta name="author" content="Win Wu">
 
@@ -38,11 +38,11 @@
     <div id="navbar_pager" class="pagination">
       <ul>
       
-        <li class="prev"><a href="/windows-8-app/2013/09/20/day5-win8-app-winrt" title="Day5  Windows API  For Windows App（一） WinRT">&larr; Previous</a></li>
+        <li class="prev"><a href="/windows-8-app/2013/09/22/day7-win8-app-blankapp" title="Day7 介紹空白應用程式 Blank App">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/windows-8-app/2013/09/22/day7-win8-app-blankapp" title="Day7 介紹空白應用程式 Blank App">Next &rarr;</a></li>
+        <li class="next disabled"><a>Next &rarr;</a>
       
       </ul>
     </div>
@@ -130,11 +130,11 @@
         <div class="pagination">
         <ul>
         
-        <li class="prev"><a href="/windows-8-app/2013/09/20/day5-win8-app-winrt" title="Day5  Windows API  For Windows App（一） WinRT">&larr; Previous</a></li>
+        <li class="prev"><a href="/windows-8-app/2013/09/22/day7-win8-app-blankapp" title="Day7 介紹空白應用程式 Blank App">&larr; Previous</a></li>
         
         <li><a href="/archive.html">Archive</a></li>
         
-        <li class="next"><a href="/windows-8-app/2013/09/22/day7-win8-app-blankapp" title="Day7 介紹空白應用程式 Blank App">Next &rarr;</a></li>
+        <li class="next disabled"><a>Next &rarr;</a>
         
         </ul>
         </div>
@@ -143,110 +143,75 @@
         
 <div id="post_html_wrap">
 <div class="page-header">
-  <h1>Day6  Windows API  For Windows App（二） WinJS <small>HTML5 X JavaScript 開發 Windows 8 Apps</small></h1>
+  <h1>Day7 visual studio 2012 模擬器(Simulator)的介紹 <small>HTML5 X JavaScript 開發 Windows 8 Apps</small></h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>21 September 2013</span>
+      <span>22 September 2013</span>
     </div>
     <div class="content">
-      <p>繼上一篇介紹 WinRT ,接下來要聊 WinJS。</p>
-
-<h3 id='windows_library_for_javascript'>Windows Library for JavaScript:</h3>
+      <h2 id='_visual_studio_2012__simulator'>這篇要向大家介紹的是 visual studio 2012 的 Simulator（模擬器）</h2>
 
 <ul>
 <li>
-<p>有的人會直接稱他為 <code>WinJS</code>。</p>
+<p>掐指算一算，感覺我寫的東西需要加快速度了&#8230;，不然有些我想寫的我怕寫不到XD</p>
 </li>
 
 <li>
-<p>這個 API 跟 Windows Runtime 是不一樣的,他是純 JavaScript。</p>
+<p>之前有提到過，如果要在 visual studio 跑自己正在編寫的專案，可以點按『本機電腦』的那顆按鈕，就會幫你執行你的 App 在 windows 8 的系統上，現在，你有另外一種選擇，那就是模擬器。</p>
 </li>
+</ul>
 
-<li>
-<p>這類的 API 都是提供一些 windows 8 app style 的元件。</p>
-</li>
+<p>* 為什麼要特別提這個東西呢？ 哦哦也只是一個工具啦！～，不喜歡也可以不用，只是模擬器提供更多的功能，所以才叫模擬器。</p>
 
-<li>
-<p>不過要注意的是,如果你要使用這個 API,你一定要載入 <code>base.js</code> ,然後再載入 <code>ui.js</code>, 這部分 先知道這些觀念就好,通常當我們建立空白的 App 專案時,其會幫你產生 <code>default.html</code> 這個檔案,裡面已經幫你寫好了,像這樣:</p>
+<p>* 執行於本機的模式，環境是真的屬於你的本機，但模擬器，可以模擬出你本機電腦做不到的事。</p>
 
-<p><code>&lt;script href=&quot;//Microsoft.WinJS.1.0/js/base.js&quot;&gt;&lt;/script&gt;</code></p>
-
-<p><code>&lt;script href=&quot;//Microsoft.WinJS.1.0/js/ui.js&quot;&gt;&lt;/script&gt;</code></p>
-</li>
-
-<li>
-<p>WinJS 可以讓你自己擴充功能,它可以讓你自己定義命名空間。WinJS 包含了以下幾種很有幫助的事:</p>
+<h3 id='id25'>從本機電腦切換成模擬器</h3>
+<img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-1.png' width='50%' />
+<p>* 首先你要先開啓一個專案。</p>
 
 <ul>
-<li>實踐 CommonJS Promises/A</li>
+<li>將有play icon的地方從『本機電腦』，切換成『模擬器』。</li>
 
-<li>UI組件</li>
-
-<li>DOM utilities</li>
-
-<li>導航 and xhr</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h3 id='winjs__api__'>WinJS 有哪些 API 呢? 舉例來說:</h3>
-
-<ul>
-<li>
-<p>WinJS.Application</p>
-</li>
-
-<li>
-<p>WinJS.Binding</p>
-</li>
-
-<li>
-<p>WinJS.Class</p>
-</li>
-
-<li>
-<p>WinJS.Namespace</p>
-</li>
-
-<li>
-<p>WinJS.Navigation</p>
-</li>
-
-<li>
-<p>WinJS.Resources</p>
-</li>
-
-<li>
-<p>WinJS.UI (初學時會最常用到這個)</p>
-</li>
-
-<li>
-<p>WinJS.UI.Rating</p>
-</li>
-
-<li>
-<p>WinJS.UI.AppBar</p>
-</li>
-
-<li>
-<p>WinJS.UI.FlipView</p>
-</li>
-
-<li>
-<p>WinJS.Utilities</p>
-</li>
-</ul>
-<p>最後要順帶一提的是,這兩個 API( WinRT 跟 WinJS ) 是 only for Windows Store App,也就是說只能用在開發 windows 8 app 應用程式市集的 App,並沒有支援瀏覽器,也就是你直接點首頁 default.html 是可以用瀏覽器開，可是不會是你想要的樣子。</p><hr />
-<h2 id='winrt_vs_winjs'>WinRT v.s WinJS</h2>
-
-<ul>
-<li>可以把 WinRT (Windows Runtime) 想像成是一個運行的平台。而 WinJS 可以跑在 WinRT(Windows Runtime) 上。</li>
+<li>接著點按『模擬器』。（不是只要切換就好，切換後還要再點次play icon，只是方式變成模擬器）</li>
 </ul>
 
-<p>今日進度結束。</p>
+<h3 id='id26'>模擬器的界面</h3>
+<img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-2.png' width='100%' />
+<p>* 模擬器啓動後，會模擬你當下的專案。 * 右邊有很多功能列，各有不同的功能，一個一個來看吧，圖標可能不清楚，不過原則就是由上往下是1~12號。</p>
+
+<pre><code>1. 最小化視窗
+2. Always on Top (釘選視窗)
+3. Mouse pointer 使用滑鼠
+4. Touch emulator 觸控模擬
+5. Emulate touch zooming 模擬觸控zooming
+6. Emulate touch rotation 模擬觸控rotation
+7. Rotate device 90 clockwise 向右90度
+8. Rotate device 90 counter-clockwise 向左90度
+9. Set resolution/scaling 切換成其他大小的螢幕
+10. set GPS 設定GPS定位
+11. Take a screenshot 拍模擬器的螢幕畫面
+12. screenshot setting</code></pre>
+<img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-3.png' width='5%' />
+<h3 id='id27'>相關圖片</h3>
+
+<p>* 因為模擬器的圖片截不起來（裡面畫面截得起來，可是外面的界面沒辦法），所以我只好用拍的。</p>
+
+<p>這一張是 模擬觸控zooming 的樣子。 <img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-6.png' width='100%' /></p>
+
+<p>模擬區域會內容也可以切換回開始畫面。 <img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-7.png' width='100%' /></p>
+
+<p>向右向左旋轉時改面顯示方向。 <img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-8.png' width='100%' /></p>
+
+<p>選擇各種不同螢幕大小。 <img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-9.png' width='100%' /></p>
+
+<p>使用GPS定位時需要取得現在位置。 <img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-10.png' width='100%' /></p>
+<img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-11.png' width='100%' /><img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-12.png' width='100%' /><img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-13.png' width='100%' />
+<p>* 關掉模擬器，要在下方工具列選擇關閉視窗。</p>
+<img src='https://raw.github.com/winwu/winwu.github.io/master/_site/images/Windows-8-app/day71-4.png' width='60%' /><hr />
+<p>今日進度結束，這篇算是一個小插曲，但也蠻值得介紹的一個工具。</p>
 
 <p>如有任何問題，歡迎留言。雖然我不一定會 :P，但盡可能找到 reference 或解答。</p>
     </div>
@@ -293,11 +258,11 @@
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/windows-8-app/2013/09/20/day5-win8-app-winrt" title="Day5  Windows API  For Windows App（一） WinRT">&larr; Previous</a></li>
+        <li class="prev"><a href="/windows-8-app/2013/09/22/day7-win8-app-blankapp" title="Day7 介紹空白應用程式 Blank App">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/windows-8-app/2013/09/22/day7-win8-app-blankapp" title="Day7 介紹空白應用程式 Blank App">Next &rarr;</a></li>
+        <li class="next disabled"><a>Next &rarr;</a>
       
       </ul>
     </div>
